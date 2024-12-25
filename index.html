@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parmeet Kumar | Portoflio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="images/new-letter.gif" type="image/x-icon">
+</head>
+<body>
+    <a name="home"></a>
+    <header>
+        <div class="logo">
+            <img src="images/new-letter.gif" alt="logo">
+            <div class="title">Parmeet Kumar</div>
+        </div>
+        <nav>
+            <div class="logo">
+                <button onclick="shownavbar()">
+                    <img src="images/dark mode.png" alt="more">
+                </button>
+            </div>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#about ">About</a>
+                <a href="#work">Work</a>
+                <a href="#skill">Skills</a>
+                <a href="#project">Project</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="about">
+            <div class="title">
+                Hlo, my name is <br>
+                <div class="name">Parmeet Kumar</div> <br>
+                <div class="typing">
+                    I am a <div id="element"></div> &#128102;&#127995; <br><br>
+                </div>
+                <button>
+                    <a href="images/Parmeet Resume.pdf" download>Download Resume</a>
+                </button>
+            </div>
+            <div class="image">
+                <img src="images/profile photo.png" width="100px" alt="profile picture">
+            </div>
+        </div>
+        <div id="work">
+            <p>All <span class="name">About Me</span> And <span class="name">My Experience</span></p>
+            <div class="buttons">
+                <button class="work-buttons">About Me</button>
+                <button class="work-buttons">CodeQuotient</button>
+            </div>
+            <div class="work-data">
+                <img src="images/profile1.jpg" alt="my_image">
+                <p>This is the last step before selection, where the interview begins with a general introduction
+                    question. While talking about myself, I focused on my project-based learning experience and took the
+                    discussion towards what I learned. Thou it was a 30-minute interview, the discussion itself took 25
+                    minutes in my case. After this, they move to basic DSA questions, where they check my logic-building
+                    and problem-solving skills by providing some set of data and asking questions around it. The
+                    questions were again not too hard, ranging between easy to medium level. After 2-3 DSA questions,
+                    they stepped into development. In this section, they checked my development knowledge by asking
+                    questions about what they had thought in the sessions.
+                    Most of the questions were from javascript and node.js. Moving towards the end of the interview they
+                    asked about the assignment that they asked to solve in the previous days.
+                </p>
+            </div>
+        </div>
+        <div id="skill">
+            <p>All About <span class="name">My Skills</span></p>
+            <div class="skills-data">
+                <div>
+                    <img src="images/html-5.png" alt="">
+                    <p>Html</p>
+                </div>
+                <div>
+                    <img src="images/css3.png" alt="">
+                    <p>CSS</p>
+                </div>
+                <div>
+                    <img src="images/js.png" alt="">
+                    <p>JavaScript</p>
+                </div>
+                <div>
+                    <img src="images/python.png" alt="">
+                    <p>Python</p>
+                </div>
+                <div>
+                    <img src="images/django.png" alt="">
+                    <p>Django</p>
+                </div>
+                <div>
+                    <img src="images/mysql.png" alt="">
+                    <p>MySql</p>
+                </div>
+                <div>
+                    <img src="images/c++.png" alt="">
+                    <p>C++ with STL</p>
+                </div>
+                <div>
+                    <img src="images/dsa.png" alt="">
+                    <p>Data Structures and Algorithm</p>
+                </div>
+            </div>
+        </div>
+        <div id="project">
+            <p>All About<span class="name"> My Projects </span></p>
+            <div class="projects-data">
+                <div>
+                    <img src="images/amazon.webp" alt="Poster">
+                    <p>Amazon Clone</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="#"><img src="images/eye.png" alt="See Me"></a>
+                        <a href="#"><img src="images/github.png" alt="Github Me"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/rockpaperscissorposter.webp" alt="Poster">
+                    <p>Stone Paper Scissor</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="#"><img src="images/eye.png" alt="See Me"></a>
+                        <a href="#"><img src="images/github.png" alt="Github Me"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/movieposter.jpg" alt="Poster">
+                    <p>Movie Website</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="#"><img src="images/eye.png" alt="See Me"></a>
+                        <a href="#"><img src="images/github.png" alt="Github Me"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/dictionaryposter.jpg" alt="Poster">
+                    <p>Dictionary Website</p>
+                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
+                    <div class="link">
+                        <a href="#"><img src="images/eye.png" alt="See Me"></a>
+                        <a href="#"><img src="images/github.png" alt="Github Me"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <p>Take a coffee and talk to me</p>
+            <div id="contact-data">
+                <img src="images/contact.png" alt="contact_image">
+                <form action="" onsubmit="event.preventDefault(); SendMail()">
+                    <div class="input-fields">
+                        <input type="text" id="name" required autocomplete="additional-name">
+                        <label for="name">Enter your name</label>
+                    </div>
+                    <div class="input-fields">
+                        <input type="tel" id="mobile" maxlength="13" minlength="10" required>
+                        <label for="mobile">Enter your mobile number</label>
+                    </div>
+                    <div class="input-fields">
+                        <input type="email" id="email" required>
+                        <label for="email">Enter your email id here</label>
+                    </div>
+                    <div class="input-fields">
+                        <textarea id="message" autocomplete="tel"></textarea>
+                        <label for="message">Enter your message here</label>
+                    </div>
+                    <input type="reset" value="Reset"><br>
+                    <input type="submit" value="Submit"><br>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p align="center">Design and Build by Parmeet Kumar. All Right Reserved 2024</p>
+        <div id="footer-item">
+            <a href="https://www.linkedin.com/in/parmeet-kumar">
+                <img src="images/linkedin.png" alt="linkedin">
+            </a>
+            <a href="https://github.com/Parmeetkumarg90">
+                <img src="images/github.png" alt="github">
+            </a>
+            <a href="https://leetcode.com/u/parmeetkumarg90/">
+                <img src="images/leetcode.png" alt="leetcode">
+            </a>
+            <a href="mailto:parmeetkumarg90@gmail.com">
+                <img src="images/email.png" alt="email">
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "Wtr_-YSW20RcPakgI",
+});
+})();
+</script>
+<script src="index.js"></script>
+</html>
