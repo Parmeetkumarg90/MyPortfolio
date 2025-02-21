@@ -11,7 +11,8 @@
 
 body {
     width: 100vw;
-    background-color: #0c2e33;
+    /* background-color: #0c2e33; */
+    background-color: #000019;
     /* background-color: #6d8196; */
 }
 
@@ -24,7 +25,7 @@ header {
     height: 15vmin;
     border-bottom: 2px solid rgb(255, 255, 255);
     box-shadow: 10px 0px 50px 10px rgb(255, 0, 0);
-    background-color: #0c2e33;
+    background-color: #000019;
     z-index: 1;
     margin-bottom: 5%;
     display: flex;
