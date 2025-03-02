@@ -577,7 +577,7 @@ footer {
 
 @keyframes contactimg {
     0% {
-        transform: translateY(10px);
+        transform: translateY(8px);
     }
 
     25% {
@@ -585,7 +585,7 @@ footer {
     }
 
     50% {
-        transform: translateY(13px);
+        transform: translateY(16px);
     }
 
     75% {
@@ -593,6 +593,6 @@ footer {
     }
 
     100% {
-        transform: translateY(10px);
+        transform: translateY(8px);
     }
 }
