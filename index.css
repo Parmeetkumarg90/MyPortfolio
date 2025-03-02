@@ -435,7 +435,7 @@ main {
     width: 40%;
     background: #ffffff;
     border-radius: 30%;
-    animation: contactimg 2s infinite ease-in-out;
+    animation: contactimg 0.8s infinite ease-in-out;
 }
 
 #contact-data>form {
@@ -581,15 +581,15 @@ footer {
     }
 
     25% {
-        transform: translateY(12px);
-    }
-
-    50% {
         transform: translateY(16px);
     }
 
+    50% {
+        transform: translateY(24px);
+    }
+
     75% {
-        transform: translateY(12px);
+        transform: translateY(16px);
     }
 
     100% {
