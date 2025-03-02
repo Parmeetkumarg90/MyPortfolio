@@ -435,7 +435,7 @@ main {
     width: 40%;
     background: #ffffff;
     border-radius: 30%;
-    animation: contactimg 0.8s infinite ease-in-out;
+    animation: contactimg 1.5s infinite ease-in-out;
 }
 
 #contact-data>form {
