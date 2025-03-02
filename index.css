@@ -178,29 +178,6 @@ main {
     transform: scale(1.2);
 }
 
-@keyframes colorchange {
-    0% {
-        background: conic-gradient(#ff0000, #00ff00, #0000ff);
-        /* background-color: #ff0000; */
-    }
-
-    25% {
-        background: conic-gradient(#ff0000, #00ff00, #0000ff);
-        /* background-color: #e5ff00; */
-    }
-
-    50% {
-        background: conic-gradient(#0000ff, #ff0000, #00ff00);
-        /* background-color: #00ff2a; */
-    }
-
-    75% {
-        background: conic-gradient(#00ff00, #0000ff, #ff0000);
-        /* background-color: #1800f5; */
-    }
-
-}
-
 #element {
     display: inline-block;
 }
@@ -571,4 +548,28 @@ footer {
     #footer-item>a {
         width: 60%;
     }
+}
+
+
+@keyframes colorchange {
+    0% {
+        background: conic-gradient(#ff0000, #00ff00, #0000ff);
+        /* background-color: #ff0000; */
+    }
+
+    25% {
+        background: conic-gradient(#ff0000, #00ff00, #0000ff);
+        /* background-color: #e5ff00; */
+    }
+
+    50% {
+        background: conic-gradient(#0000ff, #ff0000, #00ff00);
+        /* background-color: #00ff2a; */
+    }
+
+    75% {
+        background: conic-gradient(#00ff00, #0000ff, #ff0000);
+        /* background-color: #1800f5; */
+    }
+
 }
