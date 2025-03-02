@@ -175,7 +175,7 @@ main {
 }
 #about .image:hover {
     box-shadow: 0px 12px 20px 20px red;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 @keyframes colorchange {
