@@ -18,7 +18,7 @@ let string = new Typed('#element', {
 document.getElementsByClassName("work-buttons")[0].addEventListener("click", () => {
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "images/user photo.gif");
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("alt", "my_imgage");
-    document.getElementsByClassName("work-data")[0].lastElementChild.innerText = `My name is Parmeet Kumar. I am a recent graduate (2022-2025) in BCA from Arya PG College, Panipat. I have completed                       an internship at CodeQuotient, where I gained valuable experience in Data Structures and Algorithms, as well as                          Frontend Web Development. I am eager to apply my skills and contribute to your team as a Web Developer.
+    document.getElementsByClassName("work-data")[0].lastElementChild.innerHTML= `My name is Parmeet Kumar. I am a recent graduate (2022-2025) in BCA from Arya PG College, Panipat. I have completed                       an internship at CodeQuotient, where I gained valuable experience in Data Structures and Algorithms, as well as                          Frontend Web Development. I am eager to apply my skills and contribute to your team as a Web Developer.
                     <span class="name">
                         <br>Parmeet Kumar<br>
                         +919068057560<br>
