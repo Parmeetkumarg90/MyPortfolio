@@ -18,9 +18,12 @@ let string = new Typed('#element', {
 document.getElementsByClassName("work-buttons")[0].addEventListener("click", () => {
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "images/user photo.gif");
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("alt", "my_imgage");
-    document.getElementsByClassName("work-data")[0].lastElementChild.innerText = `
-    This is the last step before selection, where the interview begins with a general introduction question. While talking about myself, I focused on my project-based learning experience and took the discussion towards what I learned. Thou it was a 30-minute interview, the discussion itself took 25 minutes in my case. After this, they move to basic DSA questions, where they check my logic-building and problem-solving skills by providing some set of data and asking questions around it. The questions were again not too hard, ranging between easy to medium level. After 2-3 DSA questions, they stepped into development. In this section, they checked my development knowledge by asking questions about what they had thought in the sessions. Most of the questions were from javascript and node.js. Moving towards the end of the interview they asked about the assignment that they asked to solve in the previous days.
-            `;
+    document.getElementsByClassName("work-data")[0].lastElementChild.innerText = `My name is Parmeet Kumar. I am a recent graduate (2022-2025) in BCA from Arya PG College, Panipat. I have completed                       an internship at CodeQuotient, where I gained valuable experience in Data Structures and Algorithms, as well as                          Frontend Web Development. I am eager to apply my skills and contribute to your team as a Web Developer.
+                    <span class="name">
+                        <br>Parmeet Kumar<br>
+                        +919068057560<br>
+                        parmeetkumarg90@gmail.com
+                    </span>`;
 });
 document.getElementsByClassName("work-buttons")[1].addEventListener("click", () => {
     document.getElementsByClassName("work-data")[0].firstElementChild.setAttribute("src", "images/codequotient.jpeg");
