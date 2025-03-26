@@ -433,7 +433,7 @@ main {
 
 #contact-data>img {
     width: 40%;
-    background: #ffffff;
+/*     background: #ffffff; */
     border-radius: 100%;
     animation: contactimg 1.5s infinite ease-in-out;
 }
