@@ -1,255 +1,1614 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parmeet Kumar | Backend & Distributed Systems Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="shortcut icon"
+      href="images/new-letter.gif"
+      type="image/x-icon"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parmeet Kumar | Portoflio</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="images/new-letter.gif" type="image/x-icon">
-</head>
-<body>
+  <body>
     <a name="home"></a>
     <header>
+      <div class="logo">
+        <div class="code-symbol">&lt;/&gt;</div>
+        <div class="title">Parmeet Kumar</div>
+      </div>
+      <nav>
         <div class="logo">
-            <img src="images/new-letter.gif" alt="logo">
-            <div class="title">Parmeet Kumar</div>
+          <button onclick="shownavbar()">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
-        <nav>
-            <div class="logo">
-                <button onclick="shownavbar()">
-                    <img src="images/dark mode.png" alt="more">
-                </button>
-            </div>
-            <div class="nav">
-                <a href="#home">Home</a>
-                <a href="#about ">About</a>
-                <a href="#work">Work</a>
-                <a href="#skill">Skills</a>
-                <a href="#project">Project</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+        <div class="nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#journey">Journey</a>
+          <a href="#expertise">Skills</a>
+          <a href="#work">Experience</a>
+          <a href="#project">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </header>
+
     <main>
-        <div id="about">
-            <div class="title">
-                Hlo, my name is <br>
-                <div class="name">Parmeet Kumar</div> <br>
-                <div class="typing">
-                    I am a <div id="element"></div> &#128102;&#127995; <br><br>
-                </div>
-                <button>
-                    <a href="images/Parmeet Resume.pdf" download>Download Resume</a>
+      <!-- About Me Section -->
+      <section id="about">
+        <div class="about-grid">
+          <div class="profile-card-mockup">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">profile.png</span>
+            </div>
+            <div class="about-image-wrapper">
+              <img src="images/profile photo.png" alt="Parmeet Kumar" />
+            </div>
+          </div>
+          <div class="about-details">
+            <div class="developer-tag">
+              <span class="tag-icon">⚡</span>
+              <span class="tag-text">SYSTEMS &amp; BACKEND ENGINEER</span>
+            </div>
+            <h1 class="about-name-title">Parmeet <span class="gradient-text">Kumar</span></h1>
+            <p class="about-text">
+              I am a Backend Engineer specializing in building scale-ready
+              server systems, distributed microservice architectures, and
+              high-performance server pipelines. My professional engineering
+              focus is on server-side architecture, performance optimization,
+              and robust distributed domains.
+            </p>
+            <p class="about-text">
+              I specialize in creating decoupled microservices using
+              Domain-Driven Design (DDD) and CQRS patterns, real-time message
+              queuing pipelines with RabbitMQ/BullMQ, custom Database systems,
+              and robust AI integrations. I love designing reliable
+              infrastructures and solving complex architectural scaling
+              bottlenecks.
+            </p>
+
+            <div class="quotes-block">
+              <div class="quote-slider">
+                <button
+                  onclick="prevQuote()"
+                  class="quote-nav-btn"
+                  aria-label="Previous quote"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
                 </button>
+                <div class="quote-content">
+                  <p class="quote-text" id="gita-quote">
+                    "You have the right to perform your actions, but not to
+                    claim the results."
+                  </p>
+                  <span class="quote-author" id="gita-author"
+                    >– Bhagavad Gita 2.47</span
+                  >
+                </div>
+                <button
+                  onclick="nextQuote()"
+                  class="quote-nav-btn"
+                  aria-label="Next quote"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="image">
-                <img src="images/profile photo.png" width="100px" alt="profile picture">
-            </div>
+
+          </div>
         </div>
-        <div id="work">
-            <p>All <span class="name">About Me</span> And <span class="name">My Experience</span></p>
-            <div class="buttons">
-                <button class="work-buttons">About Me</button>
-                <button class="work-buttons">CodeQuotient</button>
+      </section>
+
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="hero-content">
+          <div class="hero-badge">Hi, I'm Parmeet Kumar</div>
+          <h1>
+            Designing Robust <br /><span class="gradient-text"
+              >Architectures &amp; Pipelines</span
+            >
+          </h1>
+          <div class="typing-container">
+            <span>I am a </span>
+            <div id="element"></div>
+          </div>
+          <p class="hero-subtitle">
+            Experienced in building modular monoliths, message queues, custom
+            ORMs, and AI workflow integrations. Underneath it all: a passion for
+            clean database systems.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">
+              <a href="images/Parmeet Resume.pdf" download>Download Resume</a>
+            </button>
+            <button class="btn btn-secondary">
+              <a href="#contact">Get In Touch</a>
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="terminal-mockup">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title"
+                >interactive-shell - parmeet@server</span
+              >
             </div>
-            <div class="work-data">
-                <img src="images/user photo.gif" alt="my_image">
-<!--                 <img src="images/profile1.jpg" alt="my_image"> -->
-                <p>My name is Parmeet Kumar. I am a recent graduate (2022-2025) in BCA from Arya PG College, Panipat. I have completed                       an internship at CodeQuotient, where I gained valuable experience in Data Structures and Algorithms, as well as                          Frontend Web Development. I am eager to apply my skills and contribute to your team as a Web Developer.
-                    <span class="name">
-                        <br>Parmeet Kumar<br>
-                        +919068057560<br>
-                        parmeetkumarg90@gmail.com
-                    </span>
+            <div class="terminal-body" onclick="focusTerminal()">
+              <div id="terminal-history">
+                <p class="cmd">cat developer.json</p>
+                <pre><code>{
+  <span class="key">"name"</span>: <span class="val">"Parmeet Kumar"</span>,
+  <span class="key">"role"</span>: <span class="val">"Backend Engineer"</span>,
+  <span class="key">"patterns"</span>: [<span class="val">"Modular Monoliths"</span>, <span class="val">"Event-Driven"</span>],
+  <span class="key">"status"</span>: <span class="val">"Scale-ready"</span>
+}</code></pre>
+                <p class="terminal-help-msg">
+                  Type <span class="key">help</span> to see available commands.
                 </p>
+              </div>
+              <div class="terminal-input-line">
+                <span class="prompt">parmeet@server:~$</span>
+                <input
+                  type="text"
+                  id="terminal-input"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </div>
             </div>
+          </div>
         </div>
-        <div id="skill">
-            <p>All About <span class="name">My Skills</span></p>
-            <div class="skills-data">
-                <div>
-                    <img src="images/html-5.png" alt="">
-                    <p>Html</p>
-                </div>
-                <div>
-                    <img src="images/css3.png" alt="">
-                    <p>CSS</p>
-                </div>
-                <div>
-                    <img src="images/js.png" alt="">
-                    <p>JavaScript</p>
-                </div>
-                <div>
-                    <img src="images/python.png" alt="">
-                    <p>Python</p>
-                </div>
-                <div>
-                    <img src="images/django.png" alt="">
-                    <p>Django</p>
-                </div>
-                <div>
-                    <img src="images/mysql.png" alt="">
-                    <p>MySql</p>
-                </div>
-                <div>
-                    <img src="images/c++.png" alt="">
-                    <p>C++ with STL</p>
-                </div>
-                <div>
-                    <img src="images/dsa.png" alt="">
-                    <p>Data Structures and Algorithm</p>
-                </div>
+      </section>
+
+      <!-- Architecture Learning Journey -->
+      <section id="journey">
+        <div class="section-title">
+          <h2>
+            Architecture <span class="gradient-text">Learning Journey</span>
+          </h2>
+          <p class="subtitle">
+            "Good Architecture Comes From Solving Real Problems."
+          </p>
+          <div class="line"></div>
+        </div>
+        <div class="journey-timeline">
+          <div class="timeline-step">
+            <div class="step-marker">01</div>
+            <div class="step-content">
+              <h3>Monolithic Beginnings</h3>
+              <p>
+                Started with traditional monolithic MERN stack projects using
+                MVC structure. Faced tightly-coupled codebases, scaling issues,
+                and code conflicts.
+              </p>
             </div>
-        </div>
-        <div id="project">
-            <p>All About<span class="name"> My Projects </span></p>
-            <div class="projects-data">
-                <div>
-                    <img src="images/portfolio.avif" alt="Poster">
-                    <p>Django Portfolio</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript, Python, Django, MySql</p>
-                    <div class="link">
-                        <a href="https://parmeet-django-portfolio.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/Django-portfolio"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/resumebuilder.jpg" alt="Poster">
-                    <p>Resume Maker</p>
-                    <p><span class="name">Skills Used => </span>Python, Django, MySql</p>
-                    <div class="link">
-                        <a href="https://parmeet-resumemaker.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/Django-ResumeMaker"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/amazon.webp" alt="Poster">
-                    <p>Amazon Clone</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="#"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="#"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/rockpaperscissorposter.webp" alt="Poster">
-                    <p>Stone Paper Scissor</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-sps.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/Stone-Paper-Scissor"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/movieposter.jpg" alt="Poster">
-                    <p>Movie Website</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-movie.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/MovieApi"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/quiz.webp" alt="Poster">
-                    <p>Quiz App</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-quiz.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/Quiz-App"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>    
-                <div>
-                    <img src="images/dictionaryposter.jpg" alt="Poster">
-                    <p>Dictionary Website</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-dictionary.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/DictionaryApi"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>                
-                <div>
-                    <img src="images/tictactoe.png" alt="Poster">
-                    <p>Tic Tac Toe</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-tictactoe.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/Tic-Tac-Toe"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/compiler.avif" alt="Poster">
-                    <p>Online Compiler</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-compiler.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/Compiler"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/todo.webp" alt="Poster">
-                    <p>To Do</p>
-                    <p><span class="name">Skills Used => </span>HTML, CSS, JavaScript</p>
-                    <div class="link">
-                        <a href="https://parmeet-todo.vercel.app/"><img src="images/eye.png" alt="See Me"></a>
-                        <a href="https://github.com/Parmeetkumarg90/ToDo"><img src="images/github.png" alt="Github Me"></a>
-                    </div>
-                </div>
+          </div>
+          <div class="timeline-step">
+            <div class="step-marker">02</div>
+            <div class="step-content">
+              <h3>Modular Monolith Shift</h3>
+              <p>
+                Gradually transitioned to modular architectures and domain
+                separation to increase testability and manage features
+                independently.
+              </p>
             </div>
-        </div>
-        <div id="contact">
-            <p>Take a coffee and talk to me</p>
-            <div id="contact-data">
-                <img src="images/contact.gif" alt="contact_image">
-                <form action="" onsubmit="event.preventDefault(); SendMail()">
-                    <div class="input-fields">
-                        <input type="text" id="name" required autocomplete="additional-name">
-                        <label for="name">Enter your name</label>
-                    </div>
-                    <div class="input-fields">
-                        <input type="tel" id="mobile" maxlength="13" minlength="10" required>
-                        <label for="mobile">Enter your mobile number</label>
-                    </div>
-                    <div class="input-fields">
-                        <input type="email" id="email" required>
-                        <label for="email">Enter your email id here</label>
-                    </div>
-                    <div class="input-fields">
-                        <textarea id="message" autocomplete="tel"></textarea>
-                        <label for="message">Enter your message here</label>
-                    </div>
-                    <input type="reset" value="Reset"><br>
-                    <input type="submit" value="Submit"><br>
-                </form>
+          </div>
+          <div class="timeline-step">
+            <div class="step-marker">03</div>
+            <div class="step-content">
+              <h3>Microservices &amp; Events</h3>
+              <p>
+                Implemented microservices and explored advanced concepts:
+                Domain-Driven Design (DDD), CQRS, Event-Driven Architecture,
+                Inbox-Outbox patterns, and RabbitMQ.
+              </p>
             </div>
+          </div>
+          <div class="timeline-step">
+            <div class="step-marker">04</div>
+            <div class="step-content">
+              <h3>Resilient Architectures</h3>
+              <p>
+                Focusing on system reliability and fault tolerance. Designing inbox-outbox synchronization pipelines, circuit breakers, caching models, and transactional outboxes.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="expertise">
+        <div class="section-title">
+          <h2>
+            Core <span class="gradient-text">Skills &amp; Technologies</span>
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="skills-rows-container">
+          <!-- Row 1: Architectural Paradigms -->
+          <div class="skills-row">
+            <div class="skills-row-header">
+              <h3>Architectural Paradigms</h3>
+            </div>
+            <div class="skills-row-items">
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+                <span>Domain-Driven Design (DDD)</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <polyline points="16 3 21 3 21 8"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                  <path
+                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
+                  ></path>
+                </svg>
+                <span>CQRS Architecture</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <circle cx="18" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M18 14.5c0-2-3-3-3-3s-3 1-3 3v.5"></path>
+                  <path d="M6 9v6"></path>
+                </svg>
+                <span>Event-Driven (EDA)</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path
+                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  />
+                </svg>
+                <span>Event Sourcing</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                  <line x1="12" y1="4" x2="12" y2="20"></line>
+                </svg>
+                <span>Inbox-Outbox Pattern</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Microservices</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+                <span>Saga Pattern</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="3" y="3" width="18" height="6" rx="1"></rect>
+                  <rect x="3" y="15" width="18" height="6" rx="1"></rect>
+                  <line x1="12" y1="9" x2="12" y2="15"></line>
+                </svg>
+                <span>Broker &amp; Job Queues</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path d="M17 2.1l4 4-4 4M3 22l8-8M7 22l14-14M3 18l4 4" />
+                </svg>
+                <span>Pub/Sub &amp; Real-Time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Languages & Backend Engineering -->
+          <div class="skills-row">
+            <div class="skills-row-header">
+              <h3>Languages &amp; Backend</h3>
+            </div>
+            <div class="skills-row-items">
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                  alt="C++"
+                />
+                <span>C++ (STL)</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  alt="Python"
+                />
+                <span>Python</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                />
+                <span>TypeScript</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                  alt="Django"
+                />
+                <span>Django</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path d="M16 18l6-6-6-6M8 6L2 12l6 6" />
+                </svg>
+                <span>DSA &amp; OOP</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                  alt="Java"
+                />
+                <span>Java</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
+                  alt="NestJS"
+                />
+                <span>NestJS</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="NodeJS"
+                />
+                <span>Node.js / Express</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Databases & Infrastructure -->
+          <div class="skills-row">
+            <div class="skills-row-header">
+              <h3>Databases &amp; Infrastructure</h3>
+            </div>
+            <div class="skills-row-items">
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                  alt="MongoDB"
+                />
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                />
+                <span>MySQL</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                  alt="PostgreSQL"
+                />
+                <span>PostgreSQL</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                  alt="Redis"
+                />
+                <span>Redis</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="3" y="15" width="18" height="6" rx="1" />
+                  <rect x="3" y="9" width="18" height="6" rx="1" />
+                  <rect x="3" y="3" width="18" height="6" rx="1" />
+                </svg>
+                <span>BullMQ</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
+                  alt="Socket.io"
+                />
+                <span>Socket.io</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg"
+                  alt="RabbitMQ"
+                />
+                <span>RabbitMQ</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                  <line x1="6" y1="6" x2="6.01" y2="6" />
+                  <line x1="6" y1="18" x2="6.01" y2="18" />
+                </svg>
+                <span>TypeORM</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M21 12H3M12 3v18" />
+                </svg>
+                <span>MikroORM</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/mongoose/880000"
+                  alt="Mongoose"
+                />
+                <span>Mongoose</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                  alt="Docker"
+                />
+                <span>Docker</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                  alt="Linux"
+                />
+                <span>Linux (CLI)</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git"
+                />
+                <span>Git &amp; GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 4: Frontend & Modern Tools -->
+          <div class="skills-row">
+            <div class="skills-row-header">
+              <h3>Frontend &amp; Tools</h3>
+            </div>
+            <div class="skills-row-items">
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                />
+                <span>HTML5 &amp; CSS3</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                />
+                <span>React</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                  alt="Tailwind CSS"
+                />
+                <span>Tailwind CSS</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+                  alt="MUI"
+                />
+                <span>MUI</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                  alt="Redux"
+                />
+                <span>Redux &amp; RTK</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <span>Zustand</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                  alt="Postman"
+                />
+                <span>Postman</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" />
+                </svg>
+                <span>HeroUI</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/antdesign/018FF8"
+                  alt="Ant Design"
+                />
+                <span>Ant Design</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/reacthookform/EC5990"
+                  alt="React Hook Form"
+                />
+                <span>React Hook Form</span>
+              </div>
+              <div class="skill-badge">
+                <img src="https://cdn.simpleicons.org/zod/3E67B1" alt="Zod" />
+                <span>Zod</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 5: Payment Gateways Integration -->
+          <div class="skills-row">
+            <div class="skills-row-header">
+              <h3>Payment Gateways</h3>
+            </div>
+            <div class="skills-row-items">
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/stripe/635BFF"
+                  alt="Stripe"
+                />
+                <span>Stripe</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/razorpay/0B72E7"
+                  alt="Razorpay"
+                />
+                <span>Razorpay</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+                <span>Paymongo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 6: Cloud Platforms & Hosting -->
+          <div class="skills-row">
+            <div class="skills-row-header">
+              <h3>Cloud &amp; Hosting</h3>
+            </div>
+            <div class="skills-row-items">
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/vercel/000000"
+                  alt="Vercel"
+                />
+                <span>Vercel</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/render/46E3B7"
+                  alt="Render"
+                />
+                <span>Render</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/railway/000000"
+                  alt="Railway"
+                />
+                <span>Railway</span>
+              </div>
+              <div class="skill-badge">
+                <img
+                  src="https://cdn.simpleicons.org/netlify/00C7B7"
+                  alt="Netlify"
+                />
+                <span>Netlify</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path
+                    d="M12 2a10 10 0 0 0-7.07 17.07l14.14-14.14A10 10 0 0 0 12 2zM12 22a10 10 0 0 0 7.07-17.07L4.93 19.07A10 10 0 0 0 12 22z"
+                  />
+                </svg>
+                <span>InfinityFree</span>
+              </div>
+              <div class="skill-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="skill-icon-svg"
+                >
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                </svg>
+                <span>Aiven</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Experience / Internship Section -->
+      <section id="work">
+        <div class="section-title">
+          <h2>Work &amp; <span class="gradient-text">Internships</span></h2>
+          <div class="line"></div>
+        </div>
+        <div class="timeline-container">
+          <!-- Zenmonk -->
+          <div class="timeline-item">
+            <div class="timeline-dot-wrapper">
+              <span class="timeline-dot active"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="job-header">
+                <h3>Full Stack Developer Intern <span class="company">@ Zenmonk</span></h3>
+                <span class="duration">September 2025 – Present</span>
+              </div>
+              <p class="job-desc">
+                Developing distributed microservices, asynchronous event queues, and modular backend systems using NestJS, RabbitMQ, and TypeORM/MikroORM, along with Next.js, Redux, Firebase, and MUI for full-stack integrations.
+              </p>
+              <div class="job-highlights">
+                <h4>Core Technologies &amp; Implementations:</h4>
+                <ul>
+                  <li><strong>Microservices &amp; NestJS:</strong> Designing modular, decoupled backend logic pipelines using NestJS.</li>
+                  <li><strong>Event Queues &amp; Messaging:</strong> Utilizing RabbitMQ and BullMQ for reactive asynchronous message passing and distributed job processing.</li>
+                  <li><strong>State &amp; Object Persistence:</strong> Connecting robust database structures using PostgreSQL with TypeORM and MikroORM.</li>
+                  <li><strong>Full-Stack Interface:</strong> Building responsive client interfaces using Next.js, Redux, Firebase, and MUI.</li>
+                  <li><strong>System Patterns:</strong> Applying Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CodeQuotient -->
+          <div class="timeline-item">
+            <div class="timeline-dot-wrapper">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="job-header">
+                <h3>Software Engineer Intern <span class="company">@ CodeQuotient</span></h3>
+                <span class="duration">May 2025 – September 2025</span>
+              </div>
+              <p class="job-desc">
+                Built automation pipelines, document signature integrations, scraping engines, and AI helper systems using ReactJS, Zustand, Node.js, and Google GenAI.
+              </p>
+              <div class="job-highlights">
+                <h4>Key Accomplishments &amp; Projects Shipped:</h4>
+                <ul>
+                  <li><strong>AI Resume Builder:</strong> Integrated OpenAI API structures, managing JSON profiles validation rules.</li>
+                  <li><strong>Digital Document Signature:</strong> Designed digital document hashing pipelines ensuring file verification constraints.</li>
+                  <li><strong>Problem Analyzer:</strong> Developed data analysis algorithms parsing complex problem formulations.</li>
+                  <li><strong>Asynchronous Crawler:</strong> Programmed high-speed async scraper pipelines compiling clean datasets.</li>
+                  <li><strong>E-Commerce:</strong> Refactored MVC database query routing and connection management.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="project">
+        <div class="section-title">
+          <h2>Featured <span class="gradient-text">Codebases</span></h2>
+          <div class="line"></div>
+        </div>
+        <div class="projects-grid">
+          <!-- Modular Monolith E-Commerce (Featured) -->
+          <div class="project-card">
+            <div class="project-badge">Featured System Design</div>
+            <div class="project-image">
+              <div class="project-image-placeholder mme">MMEC</div>
+            </div>
+            <div class="project-info">
+              <h3>Modular Monolith E-Commerce</h3>
+              <p class="project-desc">
+                Designed and developed a modular monolith backend architecture
+                for an e-commerce platform. Implemented clean domain-driven
+                separation, localized relational storage per module, and secure
+                inter-module synchronous communication protocols.
+              </p>
+              <div class="project-tech">
+                <span>NestJS</span>
+                <span>RabbitMQ</span>
+                <span>Socket.io</span>
+                <span>JWT</span>
+                <span>TypeORM</span>
+                <span>PostgreSQL</span>
+                <span>DDD</span>
+                <span>CQRS</span>
+                <span>TypeScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/modular-monolith-ecommerce"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RabbitMQ using amqplib -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder rmq">RMQ</div>
+            </div>
+            <div class="project-info">
+              <h3>RabbitMQ Event Broker Integration</h3>
+              <p class="project-desc">
+                Built an event distribution pipeline using RabbitMQ and
+                `amqplib`. Set up publisher/subscriber routing, task queues with
+                acknowledgment protocols, and error handling for asynchronous
+                process decoupling.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>JavaScript</span>
+                <span>RabbitMQ</span>
+                <span>amqplib</span>
+                <span>EDA</span>
+                <span>NestJS</span>
+                <span>TypeScript</span>
+                <span>Resilient Architecture</span>
+                <span>Inbox-Outbox Pattern</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/rabbit-mq-using-amqplib"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- LangChain LLM Integration POC -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder llm">LLM</div>
+            </div>
+            <div class="project-info">
+              <h3>LangChain LLM Integration POC</h3>
+              <p class="project-desc">
+                Proof of concept demonstrating custom data enrichment using
+                LangChain frameworks. Connects server pipelines to LLM providers
+                with robust prompt orchestration.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>LangChain</span>
+                <span>Google GenAI</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/langchain-llm-integration-poc"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Micro ORM POC -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder orm">ORM</div>
+            </div>
+            <div class="project-info">
+              <h3>Micro ORM Framework POC</h3>
+              <p class="project-desc">
+                Developed a lightweight Object-Relational Mapper (ORM) to
+                interface model classes with database schemas directly. Bypasses
+                bulky middleware to compile raw optimized query parameters.
+              </p>
+              <div class="project-tech">
+                <span>NestJS</span>
+                <span>PostgreSQL</span>
+                <span>MikroORM</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/micro-orm-poc"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Document Signature -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder dss">DSS</div>
+            </div>
+            <div class="project-info">
+              <h3>Document Signature service</h3>
+              <p class="project-desc">
+                A backend application designed to handle digital document
+                signatures. Integrates hashing validation to ensure file
+                verification constraints.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>Mongoose</span>
+                <span>Nodemailer</span>
+                <span>Redis</span>
+                <span>Multer</span>
+                <span>Socket.io</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/Document-Signature"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Crawler -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder wc">WC</div>
+            </div>
+            <div class="project-info">
+              <h3>Web Crawler</h3>
+              <p class="project-desc">
+                An optimized systems implementation built to crawl web
+                structures. Leverages custom algorithms and low-level data
+                structures to index contents.
+              </p>
+              <div class="project-tech">
+                <span>C++</span>
+                <span>Custom C++ Library</span>
+                <span>Hashtable</span>
+                <span>Hash Map</span>
+                <span>Web Crawler</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/Crawler"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media App -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder sma">SMA</div>
+            </div>
+            <div class="project-info">
+              <h3>Social Media App</h3>
+              <p class="project-desc">
+                A dynamic client application and user hub for a social platform.
+                Features client-side state management, real-time sync,
+                validation, and user profile management.
+              </p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>Redux</span>
+                <span>Firebase Auth</span>
+                <span>React Hook Form</span>
+                <span>MUI</span>
+                <span>Zod</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/Social-Media-App"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Resume Builder -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder arb">ARB</div>
+            </div>
+            <div class="project-info">
+              <h3>AI Resume Builder</h3>
+              <p class="project-desc">
+                An AI-driven profile constructor that parses raw developer data
+                structures and outputs structured templates. Integrated LLMs
+                with validation middleware.
+              </p>
+              <div class="project-tech">
+                <span>Deepgram SDK</span>
+                <span>Node.js</span>
+                <span>React</span>
+                <span>Socket.io</span>
+                <span>Nodemailer</span>
+                <span>Redis</span>
+                <span>Mongoose</span>
+                <span>FFmpeg</span>
+                <span>BullMQ</span>
+                <span>Google GenAI</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/AI-Resume-Builder"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Analyzer -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-image-placeholder pa">PA</div>
+            </div>
+            <div class="project-info">
+              <h3>Problem Analyzer</h3>
+              <p class="project-desc">
+                A smart developer tool that scans and analyzes coding problem
+                formulations, extracting key information to assist in
+                optimization and setup.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>React</span>
+                <span>Multer</span>
+                <span>Mongoose</span>
+                <span>Express</span>
+                <span>Google GenAI</span>
+                <span>Google Cloud Vision</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Parmeetkumarg90/Problem-Analyzer"
+                  target="_blank"
+                  title="GitHub Codebase"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Beyond Coding (Hobbies) -->
+      <section id="hobbies">
+        <div class="section-title">
+          <h2>Beyond <span class="gradient-text">Coding</span></h2>
+          <p class="subtitle">Interests and hobbies that drive my creativity</p>
+          <div class="line"></div>
+        </div>
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <div class="hobby-icon">🍳</div>
+            <h3>Culinary Arts</h3>
+            <p>
+              Cooking unique and creative dishes from scratch, exploring global
+              flavors.
+            </p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">🎬</div>
+            <h3>Insightful Movies</h3>
+            <p>
+              Watching classic Sci-Fi, documentary films, and complex
+              psychological thrillers.
+            </p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">🏸</div>
+            <h3>Badminton</h3>
+            <p>
+              Playing local singles and doubles matches to stay physically
+              active and focused.
+            </p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">🎮</div>
+            <h3>Competitive Gaming</h3>
+            <p>
+              Playing strategic, high-action casual and competitive video games.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements & Certifications -->
+      <section id="achievements">
+        <div class="section-title">
+          <h2>
+            Achievements &amp; <span class="gradient-text">Certifications</span>
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="ach-icon">🥈</div>
+            <h3>Zerone IT Fest</h3>
+            <p>
+              Secured 2nd place in on-spot programming/coding competition held
+              at Arya PG College.
+            </p>
+          </div>
+          <div class="achievement-card">
+            <div class="ach-icon">🎖️</div>
+            <h3>NCC Cadet</h3>
+            <p>
+              Served as a National Cadet Corps (NCC) Cadet during school
+              education, building strong leadership and teamwork discipline.
+            </p>
+          </div>
+          <div class="achievement-card">
+            <div class="ach-icon">🤝</div>
+            <h3>NSS Volunteer</h3>
+            <p>
+              Volunteered with the National Service Scheme (NSS) during college
+              times for community support actions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="section-title">
+          <h2>Get In <span class="gradient-text">Touch</span></h2>
+          <div class="line"></div>
+        </div>
+        <div id="contact-data">
+          <div class="contact-left-col">
+            <div class="contact-visual">
+              <svg
+                viewBox="0 0 100 100"
+                class="contact-svg-illustration"
+                width="300"
+                height="300"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="url(#svg-glow)"
+                  opacity="0.15"
+                />
+                <rect
+                  x="15"
+                  y="25"
+                  width="70"
+                  height="50"
+                  rx="6"
+                  fill="#121215"
+                  stroke="rgba(63, 63, 70, 0.4)"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="15"
+                  y1="37"
+                  x2="85"
+                  y2="37"
+                  stroke="rgba(63, 63, 70, 0.4)"
+                  stroke-width="1.2"
+                />
+                <circle cx="23" cy="31" r="2.5" fill="#f87171" />
+                <circle cx="31" cy="31" r="2.5" fill="#fbbf24" />
+                <circle cx="39" cy="31" r="2.5" fill="#34d399" />
+
+                <rect
+                  x="35"
+                  y="45"
+                  width="30"
+                  height="20"
+                  rx="3"
+                  fill="none"
+                  stroke="var(--color-primary)"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M35 47L50 56L65 47"
+                  fill="none"
+                  stroke="var(--color-primary)"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <rect
+                  x="23"
+                  y="43"
+                  width="8"
+                  height="2"
+                  rx="1"
+                  fill="rgba(82, 82, 91, 0.6)"
+                />
+                <rect
+                  x="23"
+                  y="48"
+                  width="5"
+                  height="2"
+                  rx="1"
+                  fill="rgba(82, 82, 91, 0.6)"
+                />
+                <rect
+                  x="72"
+                  y="43"
+                  width="5"
+                  height="2"
+                  rx="1"
+                  fill="rgba(82, 82, 91, 0.6)"
+                />
+                <rect
+                  x="72"
+                  y="48"
+                  width="8"
+                  height="2"
+                  rx="1"
+                  fill="rgba(82, 82, 91, 0.6)"
+                />
+
+                <defs>
+                  <radialGradient id="svg-glow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="var(--color-primary)" />
+                    <stop offset="100%" stop-color="transparent" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <span class="detail-icon">📍</span>
+                <div class="detail-info">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-val">Panipat, India</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-icon">✉️</span>
+                <div class="detail-info">
+                  <span class="detail-label">Email</span>
+                  <span class="detail-val">parmeetkumarg90@gmail.com</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-icon">📞</span>
+                <div class="detail-info">
+                  <span class="detail-label">Phone</span>
+                  <span class="detail-val">+91 90680 57560</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form
+            action=""
+            onsubmit="
+              event.preventDefault();
+              SendMail();
+            "
+          >
+            <div class="input-fields">
+              <input
+                type="text"
+                id="name"
+                required
+                autocomplete="additional-name"
+              />
+              <label for="name">Enter your name</label>
+            </div>
+            <div class="input-fields">
+              <input
+                type="tel"
+                id="mobile"
+                maxlength="13"
+                minlength="10"
+                required
+              />
+              <label for="mobile">Enter your mobile number</label>
+            </div>
+            <div class="input-fields">
+              <input type="email" id="email" required />
+              <label for="email">Enter your email address</label>
+            </div>
+            <div class="input-fields">
+              <textarea id="message" required></textarea>
+              <label for="message">Enter your message here</label>
+            </div>
+            <div class="form-actions">
+              <input type="reset" class="btn btn-secondary" value="Reset" />
+              <input
+                type="submit"
+                class="btn btn-primary"
+                value="Send Message"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
+
     <footer>
-        <p align="center">Design and Build by Parmeet Kumar. All Right Reserved 2024</p>
-        <div id="footer-item">
-            <a href="https://www.linkedin.com/in/parmeet-kumar">
-                <img src="images/linkedin.png" alt="linkedin">
-            </a>
-            <a href="https://github.com/Parmeetkumarg90">
-                <img src="images/github.png" alt="github">
-            </a>
-            <a href="https://leetcode.com/u/parmeetkumarg90/">
-                <img src="images/leetcode.png" alt="leetcode">
-            </a>
-            <a href="mailto:parmeetkumarg90@gmail.com">
-                <img src="images/email.png" alt="email">
-            </a>
-        </div>
+      <p>
+        Designed and Built by Parmeet Kumar &copy; 2026. All Rights Reserved.
+      </p>
+      <div id="footer-item">
+        <a href="https://www.linkedin.com/in/parmeet-kumar" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin" />
+        </a>
+        <a href="https://github.com/Parmeetkumarg90" target="_blank">
+          <img src="images/github.png" alt="github" />
+        </a>
+        <a href="https://leetcode.com/u/parmeetkumarg90/" target="_blank">
+          <img src="images/leetcode.png" alt="leetcode" />
+        </a>
+        <a href="mailto:parmeetkumarg90@gmail.com">
+          <img src="images/email.png" alt="email" />
+        </a>
+      </div>
     </footer>
-</body>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-(function(){
-emailjs.init({
-publicKey: "Wtr_-YSW20RcPakgI",
-});
-})();
-</script>
-<script src="index.js"></script>
+  </body>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "Wtr_-YSW20RcPakgI",
+      });
+    })();
+  </script>
+  <script src="index.js"></script>
 </html>
