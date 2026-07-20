@@ -251,6 +251,8 @@ section {
     align-items: center;
     gap: 60px;
     min-height: calc(90vh - 80px);
+    position: relative;
+    padding-bottom: 80px;
 }
 
 .hero-badge {
@@ -2039,4 +2041,246 @@ footer p {
     .contact-left-col {
         max-width: 100%;
     }
+}
+
+/* Education Section Grid Styles */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.education-card {
+    background: rgba(18, 18, 21, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0.7;
+}
+
+.education-card:hover {
+    border-color: rgba(129, 140, 248, 0.2);
+    box-shadow: 0 15px 40px rgba(129, 140, 248, 0.05);
+    transform: translateY(-4px);
+}
+
+.edu-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.edu-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.edu-header .institution {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.edu-header .duration {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.edu-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive details for Education Grid */
+@media (max-width: 868px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Animation Enhance & Scroll Reveal Styles */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll Reveal Base Classes */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-35px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(35px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Transition delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Enhanced hover animations for links, elements, cards */
+.project-card, .education-card, .achievement-card, .hobby-card, .timeline-content {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.project-card:hover, .education-card:hover, .achievement-card:hover, .hobby-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 45px rgba(129, 140, 248, 0.12), 0 0 20px rgba(192, 132, 252, 0.08) !important;
+    border-color: rgba(129, 140, 248, 0.4) !important;
+}
+
+.timeline-content:hover {
+    transform: translateY(-4px) scale(1.01) !important;
+    box-shadow: 0 15px 35px rgba(129, 140, 248, 0.1) !important;
+    border-color: rgba(129, 140, 248, 0.3) !important;
+}
+
+/* Smooth hero action button animations */
+.hero-actions .btn {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-actions .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(129, 140, 248, 0.15);
+}
+
+/* Scroll Mouse Indicator styling */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    opacity: 0.8;
+    z-index: 10;
+    transition: opacity 0.3s;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+    color: var(--text-secondary);
+}
+
+.scroll-mouse {
+    width: 22px;
+    height: 34px;
+    border: 2px solid var(--text-muted);
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-wheel {
+    width: 4px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheelAnim 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollWheelAnim {
+    0% { top: 6px; opacity: 1; }
+    50% { top: 16px; opacity: 0; }
+    100% { top: 6px; opacity: 0; }
+}
+
+@media (max-width: 968px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* Card Sweep Shine Effect */
+.education-card, .project-card, .achievement-card, .hobby-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::after, .project-card::after, .achievement-card::after, .hobby-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 30%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.education-card:hover::after, .project-card:hover::after, .achievement-card:hover::after, .hobby-card:hover::after {
+    left: 150%;
+    opacity: 1;
 }

@@ -94,6 +94,7 @@ function executeTerminalCommand(cmd) {
                 <p>  <span class="key">skills</span>     - View structured technical competence</p>
                 <p>  <span class="key">projects</span>   - Show top backend codebases</p>
                 <p>  <span class="key">experience</span> - View timeline history</p>
+                <p>  <span class="key">education</span>  - View educational qualifications</p>
                 <p>  <span class="key">contact</span>    - Show contact and social links</p>
                 <p>  <span class="key">clear</span>      - Clear terminal logs</p>
             `;
@@ -122,6 +123,13 @@ function executeTerminalCommand(cmd) {
       output.innerHTML = `
                 <p>1. <b>Zenmonk</b> (Full Stack Developer Intern): Sept 2025 - Present</p>
                 <p>2. <b>CodeQuotient</b> (Software Engineer Intern): May 2025 - Sept 2025</p>
+            `;
+      break;
+    case "education":
+      output.innerHTML = `
+                <p>1. <b>Chandigarh University</b> (MCA): Pursuing (2nd Year)</p>
+                <p>2. <b>Arya P.G. College (KUK)</b> (BCA): 2021 – 2025 | CGPA: 7.3</p>
+                <p>3. <b>Arya Sr. Sec. School, Panipat</b> (Class 12 &amp; Class 10)</p>
             `;
       break;
     case "contact":
@@ -211,4 +219,22 @@ function resetQuoteTimer() {
 
 document.addEventListener("DOMContentLoaded", () => {
   startQuoteTimer();
+
+  // Scroll Reveal Animations
+  const revealElements = document.querySelectorAll(".reveal-on-scroll, .reveal-left, .reveal-right");
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.12
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => observer.observe(el));
 });
