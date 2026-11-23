@@ -1,1628 +1,740 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parmeet Kumar | Backend & Distributed Systems Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="shortcut icon"
-      href="images/new-letter.gif"
-      type="image/x-icon"
-    />
-  </head>
-
-  <body>
-    <a name="home"></a>
-    <header>
-      <div class="logo">
-        <div class="code-symbol">&lt;/&gt;</div>
-        <div class="title">Parmeet Kumar</div>
-      </div>
-      <nav>
-        <div class="logo">
-          <button onclick="shownavbar()">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-        <div class="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#journey">Journey</a>
-          <a href="#expertise">Skills</a>
-          <a href="#work">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#project">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- About Me Section -->
-      <section id="about">
-        <div class="about-grid">
-          <div class="profile-card-mockup reveal-left">
-            <div class="terminal-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="terminal-title">profile.png</span>
-            </div>
-            <div class="about-image-wrapper">
-              <img src="images/profile photo.png" alt="Parmeet Kumar" />
-            </div>
-          </div>
-          <div class="about-details reveal-right">
-            <div class="developer-tag">
-              <span class="tag-icon">⚡</span>
-              <span class="tag-text">SYSTEMS &amp; BACKEND ENGINEER</span>
-            </div>
-            <h1 class="about-name-title">Parmeet <span class="gradient-text">Kumar</span></h1>
-            <p class="about-text">
-              I am a Backend Engineer specializing in building scale-ready
-              server systems, distributed microservice architectures, and
-              high-performance server pipelines. My professional engineering
-              focus is on server-side architecture, performance optimization,
-              and robust distributed domains.
-            </p>
-            <p class="about-text">
-              I specialize in creating decoupled microservices using
-              Domain-Driven Design (DDD) and CQRS patterns, real-time message
-              queuing pipelines with RabbitMQ/BullMQ, custom Database systems,
-              and robust AI integrations. I love designing reliable
-              infrastructures and solving complex architectural scaling
-              bottlenecks.
-            </p>
-
-            <div class="quotes-block">
-              <div class="quote-slider">
-                <button
-                  onclick="prevQuote()"
-                  class="quote-nav-btn"
-                  aria-label="Previous quote"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                  </svg>
-                </button>
-                <div class="quote-content">
-                  <p class="quote-text" id="gita-quote">
-                    "You have the right to perform your actions, but not to
-                    claim the results."
-                  </p>
-                  <span class="quote-author" id="gita-author"
-                    >– Bhagavad Gita 2.47</span
-                  >
-                </div>
-                <button
-                  onclick="nextQuote()"
-                  class="quote-nav-btn"
-                  aria-label="Next quote"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Hero Section -->
-      <section id="hero">
-        <div class="hero-content">
-          <div class="hero-badge">Hi, I'm Parmeet Kumar</div>
-          <h1>
-            Designing Robust <br /><span class="gradient-text"
-              >Architectures &amp; Pipelines</span
-            >
-          </h1>
-          <div class="typing-container">
-            <span>I am a </span>
-            <div id="element"></div>
-          </div>
-          <p class="hero-subtitle">
-            Experienced in building modular monoliths, message queues, custom
-            ORMs, and AI workflow integrations. Underneath it all: a passion for
-            clean database systems.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-primary">
-              <a href="images/Parmeet Resume.pdf" download>Download Resume</a>
-            </button>
-            <button class="btn btn-secondary">
-              <a href="#contact">Get In Touch</a>
-            </button>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="terminal-mockup">
-            <div class="terminal-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="terminal-title"
-                >interactive-shell - parmeet@server</span
-              >
-            </div>
-            <div class="terminal-body" onclick="focusTerminal()">
-              <div id="terminal-history">
-                <p class="cmd">cat developer.json</p>
-                <pre><code>{
-  <span class="key">"name"</span>: <span class="val">"Parmeet Kumar"</span>,
-  <span class="key">"role"</span>: <span class="val">"Backend Engineer"</span>,
-  <span class="key">"patterns"</span>: [<span class="val">"Modular Monoliths"</span>, <span class="val">"Event-Driven"</span>],
-  <span class="key">"status"</span>: <span class="val">"Scale-ready"</span>
-}</code></pre>
-                <p class="terminal-help-msg">
-                  Type <span class="key">help</span> to see available commands.
-                </p>
-              </div>
-              <div class="terminal-input-line">
-                <span class="prompt">parmeet@server:~$</span>
-                <input
-                  type="text"
-                  id="terminal-input"
-                  autocomplete="off"
-                  spellcheck="false"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="scroll-indicator">
-          <span>Scroll Down</span>
-          <div class="scroll-mouse">
-            <div class="scroll-wheel"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Architecture Learning Journey -->
-      <section id="journey">
-        <div class="section-title">
-          <h2>
-            Architecture <span class="gradient-text">Learning Journey</span>
-          </h2>
-          <p class="subtitle">
-            "Good Architecture Comes From Solving Real Problems."
-          </p>
-          <div class="line"></div>
-        </div>
-        <div class="journey-timeline">
-          <div class="timeline-step reveal-on-scroll">
-            <div class="step-marker">01</div>
-            <div class="step-content">
-              <h3>Monolithic Beginnings</h3>
-              <p>
-                Started with traditional monolithic MERN stack projects using
-                MVC structure. Faced tightly-coupled codebases, scaling issues,
-                and code conflicts.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-step reveal-on-scroll delay-100">
-            <div class="step-marker">02</div>
-            <div class="step-content">
-              <h3>Modular Monolith Shift</h3>
-              <p>
-                Gradually transitioned to modular architectures and domain
-                separation to increase testability and manage features
-                independently.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-step reveal-on-scroll delay-200">
-            <div class="step-marker">03</div>
-            <div class="step-content">
-              <h3>Microservices &amp; Events</h3>
-              <p>
-                Implemented microservices and explored advanced concepts:
-                Domain-Driven Design (DDD), CQRS, Event-Driven Architecture,
-                Inbox-Outbox patterns, and RabbitMQ.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-step reveal-on-scroll delay-300">
-            <div class="step-marker">04</div>
-            <div class="step-content">
-              <h3>Resilient Architectures</h3>
-              <p>
-                Focusing on system reliability and fault tolerance. Designing inbox-outbox synchronization pipelines, circuit breakers, caching models, and transactional outboxes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="expertise">
-        <div class="section-title">
-          <h2>
-            Core <span class="gradient-text">Skills &amp; Technologies</span>
-          </h2>
-          <div class="line"></div>
-        </div>
-        <div class="skills-rows-container">
-          <!-- Row 1: Architectural Paradigms -->
-          <div class="skills-row reveal-on-scroll">
-            <div class="skills-row-header">
-              <h3>Architectural Paradigms</h3>
-            </div>
-            <div class="skills-row-items">
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path
-                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-                  />
-                </svg>
-                <span>Domain-Driven Design (DDD)</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <polyline points="16 3 21 3 21 8"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                  <path
-                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
-                  ></path>
-                </svg>
-                <span>CQRS Architecture</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <circle cx="18" cy="18" r="3"></circle>
-                  <circle cx="6" cy="6" r="3"></circle>
-                  <circle cx="6" cy="18" r="3"></circle>
-                  <path d="M18 14.5c0-2-3-3-3-3s-3 1-3 3v.5"></path>
-                  <path d="M6 9v6"></path>
-                </svg>
-                <span>Event-Driven (EDA)</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path
-                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                  />
-                </svg>
-                <span>Event Sourcing</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                  <line x1="12" y1="4" x2="12" y2="20"></line>
-                </svg>
-                <span>Inbox-Outbox Pattern</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <rect x="3" y="3" width="7" height="7"></rect>
-                  <rect x="14" y="3" width="7" height="7"></rect>
-                  <rect x="14" y="14" width="7" height="7"></rect>
-                  <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-                <span>Microservices</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-                <span>Saga Pattern</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <rect x="3" y="3" width="18" height="6" rx="1"></rect>
-                  <rect x="3" y="15" width="18" height="6" rx="1"></rect>
-                  <line x1="12" y1="9" x2="12" y2="15"></line>
-                </svg>
-                <span>Broker &amp; Job Queues</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path d="M17 2.1l4 4-4 4M3 22l8-8M7 22l14-14M3 18l4 4" />
-                </svg>
-                <span>Pub/Sub &amp; Real-Time</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2: Languages & Backend Engineering -->
-          <div class="skills-row reveal-on-scroll">
-            <div class="skills-row-header">
-              <h3>Languages &amp; Backend</h3>
-            </div>
-            <div class="skills-row-items">
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                  alt="C++"
-                />
-                <span>C++ (STL)</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Python"
-                />
-                <span>Python</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                />
-                <span>JavaScript</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="TypeScript"
-                />
-                <span>TypeScript</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                  alt="Django"
-                />
-                <span>Django</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path d="M16 18l6-6-6-6M8 6L2 12l6 6" />
-                </svg>
-                <span>DSA &amp; OOP</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                  alt="Java"
-                />
-                <span>Java</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
-                  alt="NestJS"
-                />
-                <span>NestJS</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                  alt="NodeJS"
-                />
-                <span>Node.js / Express</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 3: Databases & Infrastructure -->
-          <div class="skills-row reveal-on-scroll">
-            <div class="skills-row-header">
-              <h3>Databases &amp; Infrastructure</h3>
-            </div>
-            <div class="skills-row-items">
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                  alt="MongoDB"
-                />
-                <span>MongoDB</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                  alt="MySQL"
-                />
-                <span>MySQL</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL"
-                />
-                <span>PostgreSQL</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                  alt="Redis"
-                />
-                <span>Redis</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://github.com/taskforcesh.png"
-                  alt="BullMQ"
-                />
-                <span>BullMQ</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
-                  alt="Socket.io"
-                />
-                <span>Socket.io</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg"
-                  alt="RabbitMQ"
-                />
-                <span>RabbitMQ</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/typeorm/FE0808"
-                  alt="TypeORM"
-                />
-                <span>TypeORM</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://github.com/mikro-orm.png"
-                  alt="MikroORM"
-                />
-                <span>MikroORM</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/mongoose/880000"
-                  alt="Mongoose"
-                />
-                <span>Mongoose</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                  alt="Docker"
-                />
-                <span>Docker</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-                  alt="Linux"
-                />
-                <span>Linux (CLI)</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  alt="Git"
-                />
-                <span>Git &amp; GitHub</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 4: Frontend & Modern Tools -->
-          <div class="skills-row reveal-on-scroll">
-            <div class="skills-row-header">
-              <h3>Frontend &amp; Tools</h3>
-            </div>
-            <div class="skills-row-items">
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML5"
-                />
-                <span>HTML5 &amp; CSS3</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React"
-                />
-                <span>React</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="Tailwind CSS"
-                />
-                <span>Tailwind CSS</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
-                  alt="MUI"
-                />
-                <span>MUI</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-                  alt="Redux"
-                />
-                <span>Redux &amp; RTK</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg"
-                  alt="Zustand"
-                />
-                <span>Zustand</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                  alt="Postman"
-                />
-                <span>Postman</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/nextui/0099FF"
-                  alt="HeroUI"
-                />
-                <span>HeroUI</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/antdesign/018FF8"
-                  alt="Ant Design"
-                />
-                <span>Ant Design</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/reacthookform/EC5990"
-                  alt="React Hook Form"
-                />
-                <span>React Hook Form</span>
-              </div>
-              <div class="skill-badge">
-                <img src="https://cdn.simpleicons.org/zod/3E67B1" alt="Zod" />
-                <span>Zod</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 5: Payment Gateways Integration -->
-          <div class="skills-row reveal-on-scroll">
-            <div class="skills-row-header">
-              <h3>Payment Gateways</h3>
-            </div>
-            <div class="skills-row-items">
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/stripe/635BFF"
-                  alt="Stripe"
-                />
-                <span>Stripe</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/razorpay/0B72E7"
-                  alt="Razorpay"
-                />
-                <span>Razorpay</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://github.com/paymongo.png"
-                  alt="Paymongo"
-                />
-                <span>Paymongo</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 6: Cloud Platforms & Hosting -->
-          <div class="skills-row reveal-on-scroll">
-            <div class="skills-row-header">
-              <h3>Cloud &amp; Hosting</h3>
-            </div>
-            <div class="skills-row-items">
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/vercel/000000"
-                  alt="Vercel"
-                />
-                <span>Vercel</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/render/46E3B7"
-                  alt="Render"
-                />
-                <span>Render</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/railway/000000"
-                  alt="Railway"
-                />
-                <span>Railway</span>
-              </div>
-              <div class="skill-badge">
-                <img
-                  src="https://cdn.simpleicons.org/netlify/00C7B7"
-                  alt="Netlify"
-                />
-                <span>Netlify</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path
-                    d="M12 2a10 10 0 0 0-7.07 17.07l14.14-14.14A10 10 0 0 0 12 2zM12 22a10 10 0 0 0 7.07-17.07L4.93 19.07A10 10 0 0 0 12 22z"
-                  />
-                </svg>
-                <span>InfinityFree</span>
-              </div>
-              <div class="skill-badge">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="skill-icon-svg"
-                >
-                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-                </svg>
-                <span>Aiven</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Work Experience / Internship Section -->
-      <section id="work">
-        <div class="section-title">
-          <h2>Work &amp; <span class="gradient-text">Internships</span></h2>
-          <div class="line"></div>
-        </div>
-        <div class="timeline-container">
-          <!-- Zenmonk -->
-          <div class="timeline-item reveal-on-scroll">
-            <div class="timeline-dot-wrapper">
-              <span class="timeline-dot active"></span>
-            </div>
-            <div class="timeline-content">
-              <div class="job-header">
-                <h3>Full Stack Developer Intern <span class="company">@ Zenmonk</span></h3>
-                <span class="duration">September 2025 – Present</span>
-              </div>
-              <p class="job-desc">
-                Developing distributed microservices, asynchronous event queues, and modular backend systems using NestJS, RabbitMQ, and TypeORM/MikroORM, along with Next.js, Redux, Firebase, and MUI for full-stack integrations.
-              </p>
-              <div class="job-highlights">
-                <h4>Core Technologies &amp; Implementations:</h4>
-                <ul>
-                  <li><strong>Microservices &amp; NestJS:</strong> Designing modular, decoupled backend logic pipelines using NestJS.</li>
-                  <li><strong>Event Queues &amp; Messaging:</strong> Utilizing RabbitMQ and BullMQ for reactive asynchronous message passing and distributed job processing.</li>
-                  <li><strong>State &amp; Object Persistence:</strong> Connecting robust database structures using PostgreSQL with TypeORM and MikroORM.</li>
-                  <li><strong>Full-Stack Interface:</strong> Building responsive client interfaces using Next.js, Redux, Firebase, and MUI.</li>
-                  <li><strong>System Patterns:</strong> Applying Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS).</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- CodeQuotient -->
-          <div class="timeline-item reveal-on-scroll">
-            <div class="timeline-dot-wrapper">
-              <span class="timeline-dot"></span>
-            </div>
-            <div class="timeline-content">
-              <div class="job-header">
-                <h3>Software Engineer Intern <span class="company">@ CodeQuotient</span></h3>
-                <span class="duration">May 2025 – September 2025</span>
-              </div>
-              <p class="job-desc">
-                Built automation pipelines, document signature integrations, scraping engines, and AI helper systems using ReactJS, Zustand, Node.js, and Google GenAI.
-              </p>
-              <div class="job-highlights">
-                <h4>Key Accomplishments &amp; Projects Shipped:</h4>
-                <ul>
-                  <li><strong>AI Resume Builder:</strong> Integrated OpenAI API structures, managing JSON profiles validation rules.</li>
-                  <li><strong>Digital Document Signature:</strong> Designed digital document hashing pipelines ensuring file verification constraints.</li>
-                  <li><strong>Problem Analyzer:</strong> Developed data analysis algorithms parsing complex problem formulations.</li>
-                  <li><strong>Asynchronous Crawler:</strong> Programmed high-speed async scraper pipelines compiling clean datasets.</li>
-                  <li><strong>E-Commerce:</strong> Refactored MVC database query routing and connection management.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education">
-        <div class="section-title">
-          <h2>Education &amp; <span class="gradient-text">Qualifications</span></h2>
-          <div class="line"></div>
-        </div>
-        <div class="education-grid">
-          <!-- Chandigarh University -->
-          <div class="education-card reveal-on-scroll">
-            <div class="edu-header">
-              <h3>Master of Computer Applications (MCA)</h3>
-              <span class="institution">Chandigarh University</span>
-              <span class="duration">Pursuing (2nd Year)</span>
-            </div>
-            <p class="edu-desc">
-              Focusing on Advanced Computer Applications, Database Management Systems, Distributed Computing, and Software Engineering methodologies.
-            </p>
-          </div>
-
-          <!-- Arya P.G. College -->
-          <div class="education-card reveal-on-scroll delay-100">
-            <div class="edu-header">
-              <h3>Bachelor of Computer Applications (BCA)</h3>
-              <span class="institution">Arya P.G. College, Panipat (Kurukshetra University)</span>
-              <span class="duration">2021 – 2025</span>
-            </div>
-            <p class="edu-desc">
-              Graduated with CGPA: 7.3. Core studies included Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, and Web Development.
-            </p>
-          </div>
-
-          <!-- Schooling (Class 12) -->
-          <div class="education-card reveal-on-scroll">
-            <div class="edu-header">
-              <h3>Senior Secondary (Class 12)</h3>
-              <span class="institution">Arya Sr. Sec. School, Panipat (HBSE)</span>
-              <span class="duration">Completed</span>
-            </div>
-            <p class="edu-desc">
-              Focused on Science streams, including Physics, Chemistry, Mathematics, and Computer Science subjects.
-            </p>
-          </div>
-
-          <!-- Schooling (Class 10) -->
-          <div class="education-card reveal-on-scroll delay-100">
-            <div class="edu-header">
-              <h3>High School (Class 10)</h3>
-              <span class="institution">Arya Sr. Sec. School, Panipat</span>
-              <span class="duration">Completed</span>
-            </div>
-            <p class="edu-desc">
-              Completed general education program with a strong foundation in Mathematics, Science, and Social Studies.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="project">
-        <div class="section-title">
-          <h2>Featured <span class="gradient-text">Codebases</span></h2>
-          <div class="line"></div>
-        </div>
-        <div class="projects-grid">
-          <!-- Modular Monolith E-Commerce (Featured) -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-badge">Featured System Design</div>
-            <div class="project-image">
-              <div class="project-image-placeholder mme">MMEC</div>
-            </div>
-            <div class="project-info">
-              <h3>Modular Monolith E-Commerce</h3>
-              <p class="project-desc">
-                Designed and developed a modular monolith backend architecture
-                for an e-commerce platform. Implemented clean domain-driven
-                separation, localized relational storage per module, and secure
-                inter-module synchronous communication protocols.
-              </p>
-              <div class="project-tech">
-                <span>NestJS</span>
-                <span>RabbitMQ</span>
-                <span>Socket.io</span>
-                <span>JWT</span>
-                <span>TypeORM</span>
-                <span>PostgreSQL</span>
-                <span>DDD</span>
-                <span>CQRS</span>
-                <span>TypeScript</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/modular-monolith-ecommerce"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- RabbitMQ using amqplib -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder rmq">RMQ</div>
-            </div>
-            <div class="project-info">
-              <h3>RabbitMQ Event Broker Integration</h3>
-              <p class="project-desc">
-                Built an event distribution pipeline using RabbitMQ and
-                `amqplib`. Set up publisher/subscriber routing, task queues with
-                acknowledgment protocols, and error handling for asynchronous
-                process decoupling.
-              </p>
-              <div class="project-tech">
-                <span>Node.js</span>
-                <span>JavaScript</span>
-                <span>RabbitMQ</span>
-                <span>amqplib</span>
-                <span>EDA</span>
-                <span>NestJS</span>
-                <span>TypeScript</span>
-                <span>Resilient Architecture</span>
-                <span>Inbox-Outbox Pattern</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/rabbit-mq-using-amqplib"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- LangChain LLM Integration POC -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder llm">LLM</div>
-            </div>
-            <div class="project-info">
-              <h3>LangChain LLM Integration POC</h3>
-              <p class="project-desc">
-                Proof of concept demonstrating custom data enrichment using
-                LangChain frameworks. Connects server pipelines to LLM providers
-                with robust prompt orchestration.
-              </p>
-              <div class="project-tech">
-                <span>JavaScript</span>
-                <span>LangChain</span>
-                <span>Google GenAI</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/langchain-llm-integration-poc"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Micro ORM POC -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder orm">ORM</div>
-            </div>
-            <div class="project-info">
-              <h3>Micro ORM Framework POC</h3>
-              <p class="project-desc">
-                Developed a lightweight Object-Relational Mapper (ORM) to
-                interface model classes with database schemas directly. Bypasses
-                bulky middleware to compile raw optimized query parameters.
-              </p>
-              <div class="project-tech">
-                <span>NestJS</span>
-                <span>PostgreSQL</span>
-                <span>MikroORM</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/micro-orm-poc"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Document Signature -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder dss">DSS</div>
-            </div>
-            <div class="project-info">
-              <h3>Document Signature service</h3>
-              <p class="project-desc">
-                A backend application designed to handle digital document
-                signatures. Integrates hashing validation to ensure file
-                verification constraints.
-              </p>
-              <div class="project-tech">
-                <span>Node.js</span>
-                <span>Mongoose</span>
-                <span>Nodemailer</span>
-                <span>Redis</span>
-                <span>Multer</span>
-                <span>Socket.io</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/Document-Signature"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Web Crawler -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder wc">WC</div>
-            </div>
-            <div class="project-info">
-              <h3>Web Crawler</h3>
-              <p class="project-desc">
-                An optimized systems implementation built to crawl web
-                structures. Leverages custom algorithms and low-level data
-                structures to index contents.
-              </p>
-              <div class="project-tech">
-                <span>C++</span>
-                <span>Custom C++ Library</span>
-                <span>Hashtable</span>
-                <span>Hash Map</span>
-                <span>Web Crawler</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/Crawler"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social Media App -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder sma">SMA</div>
-            </div>
-            <div class="project-info">
-              <h3>Social Media App</h3>
-              <p class="project-desc">
-                A dynamic client application and user hub for a social platform.
-                Features client-side state management, real-time sync,
-                validation, and user profile management.
-              </p>
-              <div class="project-tech">
-                <span>Next.js</span>
-                <span>Redux</span>
-                <span>Firebase Auth</span>
-                <span>React Hook Form</span>
-                <span>MUI</span>
-                <span>Zod</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/Social-Media-App"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- AI Resume Builder -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder arb">ARB</div>
-            </div>
-            <div class="project-info">
-              <h3>AI Resume Builder</h3>
-              <p class="project-desc">
-                An AI-driven profile constructor that parses raw developer data
-                structures and outputs structured templates. Integrated LLMs
-                with validation middleware.
-              </p>
-              <div class="project-tech">
-                <span>Deepgram SDK</span>
-                <span>Node.js</span>
-                <span>React</span>
-                <span>Socket.io</span>
-                <span>Nodemailer</span>
-                <span>Redis</span>
-                <span>Mongoose</span>
-                <span>FFmpeg</span>
-                <span>BullMQ</span>
-                <span>Google GenAI</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/AI-Resume-Builder"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Problem Analyzer -->
-          <div class="project-card reveal-on-scroll">
-            <div class="project-image">
-              <div class="project-image-placeholder pa">PA</div>
-            </div>
-            <div class="project-info">
-              <h3>Problem Analyzer</h3>
-              <p class="project-desc">
-                A smart developer tool that scans and analyzes coding problem
-                formulations, extracting key information to assist in
-                optimization and setup.
-              </p>
-              <div class="project-tech">
-                <span>Node.js</span>
-                <span>React</span>
-                <span>Multer</span>
-                <span>Mongoose</span>
-                <span>Express</span>
-                <span>Google GenAI</span>
-                <span>Google Cloud Vision</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/Parmeetkumarg90/Problem-Analyzer"
-                  target="_blank"
-                  title="GitHub Codebase"
-                >
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Beyond Coding (Hobbies) -->
-      <section id="hobbies">
-        <div class="section-title">
-          <h2>Beyond <span class="gradient-text">Coding</span></h2>
-          <p class="subtitle">Interests and hobbies that drive my creativity</p>
-          <div class="line"></div>
-        </div>
-        <div class="hobbies-grid">
-          <div class="hobby-card reveal-on-scroll">
-            <div class="hobby-icon">🍳</div>
-            <h3>Culinary Arts</h3>
-            <p>
-              Cooking unique and creative dishes from scratch, exploring global
-              flavors.
-            </p>
-          </div>
-          <div class="hobby-card reveal-on-scroll delay-100">
-            <div class="hobby-icon">🎬</div>
-            <h3>Insightful Movies</h3>
-            <p>
-              Watching classic Sci-Fi, documentary films, and complex
-              psychological thrillers.
-            </p>
-          </div>
-          <div class="hobby-card reveal-on-scroll delay-200">
-            <div class="hobby-icon">🏸</div>
-            <h3>Badminton</h3>
-            <p>
-              Playing local singles and doubles matches to stay physically
-              active and focused.
-            </p>
-          </div>
-          <div class="hobby-card reveal-on-scroll delay-300">
-            <div class="hobby-icon">🎮</div>
-            <h3>Competitive Gaming</h3>
-            <p>
-              Playing strategic, high-action casual and competitive video games.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Achievements & Certifications -->
-      <section id="achievements">
-        <div class="section-title">
-          <h2>
-            Achievements &amp; <span class="gradient-text">Certifications</span>
-          </h2>
-          <div class="line"></div>
-        </div>
-        <div class="achievements-grid">
-          <div class="achievement-card reveal-on-scroll">
-            <div class="ach-icon">🥈</div>
-            <h3>Zerone IT Fest</h3>
-            <p>
-              Secured 2nd place in on-spot programming/coding competition held
-              at Arya PG College.
-            </p>
-          </div>
-          <div class="achievement-card reveal-on-scroll delay-100">
-            <div class="ach-icon">🎖️</div>
-            <h3>NCC Cadet</h3>
-            <p>
-              Served as a National Cadet Corps (NCC) Cadet during school
-              education, building strong leadership and teamwork discipline.
-            </p>
-          </div>
-          <div class="achievement-card reveal-on-scroll delay-200">
-            <div class="ach-icon">🤝</div>
-            <h3>NSS Volunteer</h3>
-            <p>
-              Volunteered with the National Service Scheme (NSS) during college
-              times for community support actions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <div class="section-title">
-          <h2>Get In <span class="gradient-text">Touch</span></h2>
-          <div class="line"></div>
-        </div>
-        <div id="contact-data">
-          <div class="contact-left-col reveal-left">
-            <div class="contact-visual">
-              <svg
-                viewBox="0 0 100 100"
-                class="contact-svg-illustration"
-                width="300"
-                height="300"
-              >
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="40"
-                  fill="url(#svg-glow)"
-                  opacity="0.15"
-                />
-                <rect
-                  x="15"
-                  y="25"
-                  width="70"
-                  height="50"
-                  rx="6"
-                  fill="#121215"
-                  stroke="rgba(63, 63, 70, 0.4)"
-                  stroke-width="1.5"
-                />
-                <line
-                  x1="15"
-                  y1="37"
-                  x2="85"
-                  y2="37"
-                  stroke="rgba(63, 63, 70, 0.4)"
-                  stroke-width="1.2"
-                />
-                <circle cx="23" cy="31" r="2.5" fill="#f87171" />
-                <circle cx="31" cy="31" r="2.5" fill="#fbbf24" />
-                <circle cx="39" cy="31" r="2.5" fill="#34d399" />
-
-                <rect
-                  x="35"
-                  y="45"
-                  width="30"
-                  height="20"
-                  rx="3"
-                  fill="none"
-                  stroke="var(--color-primary)"
-                  stroke-width="1.8"
-                />
-                <path
-                  d="M35 47L50 56L65 47"
-                  fill="none"
-                  stroke="var(--color-primary)"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-
-                <rect
-                  x="23"
-                  y="43"
-                  width="8"
-                  height="2"
-                  rx="1"
-                  fill="rgba(82, 82, 91, 0.6)"
-                />
-                <rect
-                  x="23"
-                  y="48"
-                  width="5"
-                  height="2"
-                  rx="1"
-                  fill="rgba(82, 82, 91, 0.6)"
-                />
-                <rect
-                  x="72"
-                  y="43"
-                  width="5"
-                  height="2"
-                  rx="1"
-                  fill="rgba(82, 82, 91, 0.6)"
-                />
-                <rect
-                  x="72"
-                  y="48"
-                  width="8"
-                  height="2"
-                  rx="1"
-                  fill="rgba(82, 82, 91, 0.6)"
-                />
-
-                <defs>
-                  <radialGradient id="svg-glow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="var(--color-primary)" />
-                    <stop offset="100%" stop-color="transparent" />
-                  </radialGradient>
-                </defs>
-              </svg>
-            </div>
-            
-            <div class="contact-details-list">
-              <div class="contact-detail-item">
-                <span class="detail-icon">📍</span>
-                <div class="detail-info">
-                  <span class="detail-label">Location</span>
-                  <span class="detail-val">Panipat, India</span>
-                </div>
-              </div>
-              <div class="contact-detail-item">
-                <span class="detail-icon">✉️</span>
-                <div class="detail-info">
-                  <span class="detail-label">Email</span>
-                  <span class="detail-val">parmeetkumarg90@gmail.com</span>
-                </div>
-              </div>
-              <div class="contact-detail-item">
-                <span class="detail-icon">📞</span>
-                <div class="detail-info">
-                  <span class="detail-label">Phone</span>
-                  <span class="detail-val">+91 90680 57560</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <form
-            action=""
-            class="reveal-right"
-            onsubmit="
-              event.preventDefault();
-              SendMail();
-            "
-          >
-            <div class="input-fields">
-              <input
-                type="text"
-                id="name"
-                required
-                autocomplete="additional-name"
-              />
-              <label for="name">Enter your name</label>
-            </div>
-            <div class="input-fields">
-              <input
-                type="tel"
-                id="mobile"
-                maxlength="13"
-                minlength="10"
-                required
-              />
-              <label for="mobile">Enter your mobile number</label>
-            </div>
-            <div class="input-fields">
-              <input type="email" id="email" required />
-              <label for="email">Enter your email address</label>
-            </div>
-            <div class="input-fields">
-              <textarea id="message" required></textarea>
-              <label for="message">Enter your message here</label>
-            </div>
-            <div class="form-actions">
-              <input type="reset" class="btn btn-secondary" value="Reset" />
-              <input
-                type="submit"
-                class="btn btn-primary"
-                value="Send Message"
-              />
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>
-        Designed and Built by Parmeet Kumar &copy; 2026. All Rights Reserved.
-      </p>
-      <div id="footer-item">
-        <a href="https://www.linkedin.com/in/parmeetkumarg90" target="_blank">
-          <img src="images/linkedin.png" alt="linkedin" />
-        </a>
-        <a href="https://github.com/Parmeetkumarg90" target="_blank">
-          <img src="images/github.png" alt="github" />
-        </a>
-        <a href="https://leetcode.com/u/parmeetkumarg90/" target="_blank">
-          <img src="images/leetcode.png" alt="leetcode" />
-        </a>
-        <a href="mailto:parmeetkumarg90@gmail.com">
-          <img src="images/email.png" alt="email" />
-        </a>
-      </div>
-    </footer>
-  </body>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parmeet Kumar | Backend & Distributed Systems Engineer</title>
+  <meta name="description" content="Portfolio of Parmeet Kumar — Backend & Distributed Systems Engineer specializing in Domain-Driven Design (DDD), CQRS, RabbitMQ/BullMQ event pipelines, and scalable NestJS microservices." />
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function () {
+    (function(){
       emailjs.init({
         publicKey: "Wtr_-YSW20RcPakgI",
       });
     })();
   </script>
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="shortcut icon" href="images/profile photo.png" type="image/png" />
+</head>
+
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-code">&lt;/&gt;</span>
+        <span class="brand-name">Parmeet Kumar</span>
+      </a>
+
+      <div class="status-indicator-desktop">
+        <span class="pulse-dot"></span>
+        <span class="status-text">SYSTEM: ONLINE · OPEN TO ROLES</span>
+      </div>
+
+      <nav class="nav" id="nav-menu">
+        <a href="#hero" class="nav-link active">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- Hero / Profile Section -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-grid">
+        <div class="hero-avatar-col">
+          <div class="avatar-frame">
+            <!-- 120° Rotated Oval Orbit with Orbiting Star Behind Image -->
+            <div class="avatar-orbit-track" aria-hidden="true">
+              <svg class="orbit-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="star-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur1" />
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur2" />
+                    <feMerge>
+                      <feMergeNode in="blur2" />
+                      <feMergeNode in="blur1" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <linearGradient id="orbit-stroke-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.7" />
+                    <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.2" />
+                    <stop offset="70%" stop-color="#8b5cf6" stop-opacity="0.5" />
+                    <stop offset="100%" stop-color="#10b981" stop-opacity="0.7" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Rotated 120 Degrees around center (160, 160) -->
+                <g transform="rotate(120 160 160)">
+                  <!-- 120° Rotated Sleek Oval Track (Flatter height, wider than 190px image) -->
+                  <ellipse cx="160" cy="160" rx="128" ry="42" stroke="url(#orbit-stroke-grad)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.65" />
+                  
+                  <!-- Trailing Stardust Particle -->
+                  <g opacity="0.45">
+                    <animateMotion path="M 32,160 a 128,42 0 1,0 256,0 a 128,42 0 1,0 -256,0" dur="12s" begin="-0.4s" repeatCount="indefinite" />
+                    <circle r="2" fill="#06b6d4" filter="url(#star-glow)" />
+                  </g>
+                  
+                  <!-- Main Orbiting Star Moving in Sleek 120° Oval Path -->
+                  <g class="orbit-star-particle">
+                    <animateMotion path="M 32,160 a 128,42 0 1,0 256,0 a 128,42 0 1,0 -256,0" dur="12s" repeatCount="indefinite" />
+                    <!-- Ambient Radiant Glow Aura -->
+                    <circle r="10" fill="#10b981" opacity="0.35" filter="url(#star-glow)" />
+                    <circle r="3.5" fill="#ffffff" filter="url(#star-glow)" />
+                    <!-- 4-Point Radiant Sparkle Star -->
+                    <path d="M 0,-13 Q 0,0 13,0 Q 0,0 0,13 Q 0,0 -13,0 Q 0,0 0,-13 Z" fill="#6ee7b7">
+                      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" />
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <img src="images/profile photo.png" alt="Parmeet Kumar" class="avatar-img" />
+            <div class="avatar-status-pill">
+              <span class="pulse-dot"></span>
+              <span>Available</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content-col">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-label">BACKEND &amp; DISTRIBUTED SYSTEMS</span>
+          </div>
+
+          <h1 class="hero-title">
+            Parmeet <span class="gradient-text">Kumar</span>
+          </h1>
+
+          <p class="hero-role">
+            Backend &amp; Distributed Systems Engineer <span class="location-sep">·</span> <span class="location-text">Panipat, Haryana, India</span>
+          </p>
+
+          <p class="hero-summary">
+            Specializing in architecting modular microservices platforms, high-concurrency event-driven pipelines (<span class="highlight">RabbitMQ</span>, <span class="highlight">BullMQ</span>), and transactional server architectures utilizing <span class="highlight">Domain-Driven Design (DDD)</span> &amp; <span class="highlight">CQRS</span> patterns. Solved <strong>220+</strong> Data Structures &amp; Algorithms challenges on LeetCode.
+          </p>
+
+          <!-- Quick Action Buttons / Social Links -->
+          <div class="hero-actions">
+            <button class="action-pill action-email" onclick="copyEmailToClipboard('parmeetkumarg90@gmail.com')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>parmeetkumarg90@gmail.com</span>
+              <span class="copy-hint" title="Copy to clipboard">Copy</span>
+            </button>
+
+            <a href="https://github.com/Parmeetkumarg90" target="_blank" rel="noopener noreferrer" class="action-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://linkedin.com/in/parmeet-kumar" target="_blank" rel="noopener noreferrer" class="action-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://leetcode.com/u/parmeetkumarg90/" target="_blank" rel="noopener noreferrer" class="action-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .271 4.763 5.48 5.48 0 0 0 4.148 2.68 5.58 5.58 0 0 0 2.94-.374 5.568 5.568 0 0 0 2.155-1.571l1.543-1.644a1.272 1.272 0 0 0-.008-1.796 1.272 1.272 0 0 0-1.795-.008l-1.561 1.662a3.02 3.02 0 0 1-1.17.854 3.04 3.04 0 0 1-1.603.204 2.98 2.98 0 0 1-2.257-1.46 3.01 3.01 0 0 1-.147-2.593 2.99 2.99 0 0 1 .684-1.17l3.966-4.246 4.793-5.132a1.272 1.272 0 0 0-.008-1.796 1.374 1.374 0 0 0-.978-.438zM20.218 10.669a1.272 1.272 0 0 0-.9.373l-4.14 4.425a1.272 1.272 0 0 0 1.803 1.795l4.14-4.425a1.272 1.272 0 0 0-.903-2.168z"/>
+              </svg>
+              <span>LeetCode (220+)</span>
+            </a>
+
+            <a href="images/Parmeet Resume.pdf" download="Parmeet Kumar Resume.pdf" class="action-pill action-resume">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Quick Telemetry Strip -->
+          <div class="telemetry-bar">
+            <div class="telemetry-item">
+              <span class="telemetry-val">99.99%</span>
+              <span class="telemetry-lbl">Reliability SLA</span>
+            </div>
+            <div class="telemetry-divider"></div>
+            <div class="telemetry-item">
+              <span class="telemetry-val">&lt;10ms</span>
+              <span class="telemetry-lbl">p99 Target</span>
+            </div>
+            <div class="telemetry-divider"></div>
+            <div class="telemetry-item">
+              <span class="telemetry-val">DDD + CQRS</span>
+              <span class="telemetry-lbl">Architecture</span>
+            </div>
+            <div class="telemetry-divider"></div>
+            <div class="telemetry-item">
+              <span class="telemetry-val">220+ DSA</span>
+              <span class="telemetry-lbl">LeetCode Solved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-desc">Hands-on engineering roles building production microservices and scalable pipelines.</p>
+      </div>
+
+      <div class="experience-list">
+        <!-- Experience Card 1: Zenmonk -->
+        <div class="card experience-card">
+          <div class="card-top-row">
+            <div>
+              <div class="company-badge-row">
+                <h3 class="company-name">Zenmonk Software &amp; Services</h3>
+                <span class="role-pill current-pill">Present</span>
+              </div>
+              <p class="role-title">Full Stack Developer Intern</p>
+            </div>
+            <div class="meta-right">
+              <span class="meta-date">Nov 2025 – Present</span>
+              <span class="meta-location">Mohali, India</span>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Architected modular microservices platforms using <strong>NestJS</strong>, <strong>Next.js</strong>, <strong>React</strong>, and <strong>TypeScript</strong> with decoupled domain logic and <strong>TypeORM</strong> relational persistence models.</li>
+            <li>Implemented resilient asynchronous message pipelines and event-driven communication systems utilizing <strong>RabbitMQ</strong>, <strong>BullMQ</strong>, and <strong>Docker</strong>.</li>
+            <li>Integrated <strong>PayMongo</strong> and <strong>GWallet</strong> (Philippines) payment gateways and architected <strong>Stripe Connected Accounts</strong> for vendor/driver onboarding and automated payouts.</li>
+            <li>Applied <strong>Domain-Driven Design (DDD)</strong> and <strong>CQRS</strong> patterns, optimizing high-concurrency order dispatch routes and real-time backend microservices.</li>
+            <li>Participated in agile peer code reviews, Git feature branch workflows, automated route testing with <strong>Postman</strong>, and schema validation with <strong>Zod</strong>.</li>
+          </ul>
+
+          <div class="tech-stack-row">
+            <span class="stack-tag">NestJS</span>
+            <span class="stack-tag">TypeScript</span>
+            <span class="stack-tag">RabbitMQ</span>
+            <span class="stack-tag">BullMQ</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">TypeORM</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">Stripe Connect</span>
+          </div>
+        </div>
+
+        <!-- Experience Card 2: CodeQuotient -->
+        <div class="card experience-card">
+          <div class="card-top-row">
+            <div>
+              <div class="company-badge-row">
+                <h3 class="company-name">CodeQuotient</h3>
+                <span class="role-pill">Completed</span>
+              </div>
+              <p class="role-title">MERN Stack Intern</p>
+            </div>
+            <div class="meta-right">
+              <span class="meta-date">Feb 2025 – Oct 2025</span>
+              <span class="meta-location">Panchkula, India</span>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Built responsive full-stack applications using <strong>MongoDB</strong>, <strong>Mongoose</strong>, <strong>Express</strong>, <strong>React</strong>, and <strong>Node.js</strong> (MERN) stack.</li>
+            <li>Mastered core computer science principles and data structures, completing over <strong>220+ challenges</strong> on LeetCode using <strong>C++</strong>.</li>
+          </ul>
+
+          <div class="tech-stack-row">
+            <span class="stack-tag">C++</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">Express.js</span>
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Architecture Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Key Architecture Projects</h2>
+        <p class="section-desc">Selected distributed systems, microservices, and high-concurrency pipelines from production and engineering explorations.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Modular Monolith E-Commerce Backend -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">01 // BACKEND ARCHITECTURE</span>
+              <span class="project-badge-tag">Featured System</span>
+            </div>
+            <h3 class="project-title">Modular Monolith E-Commerce Backend</h3>
+          </div>
+          <p class="project-description">
+            Architected a modular monolith backend system with NestJS, isolating domain contexts across payment, catalog, and ordering services. Established synchronous and asynchronous cross-module flows employing NestJS CQRS event dispatchers along with Socket.io real-time streaming connections.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">NestJS</span>
+              <span class="stack-tag">RabbitMQ</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">TypeORM</span>
+              <span class="stack-tag">CQRS</span>
+              <span class="stack-tag">Socket.io</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/modular-monolith-ecommerce" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: RabbitMQ Event Broker Decoupling Pipeline -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">02 // EVENT STREAMING</span>
+              <span class="project-badge-tag">Resilient EDA</span>
+            </div>
+            <h3 class="project-title">RabbitMQ Event Broker Decoupling Pipeline</h3>
+          </div>
+          <p class="project-description">
+            Engineered scalable event-driven messaging networks utilizing amqplib to decouple intensive processing workloads across publish-subscribe routing structures. Constructed reliable message processing mechanisms leveraging Dead Letter Exchanges (DLX), exponential backoff retries, and transactional Outbox patterns.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">RabbitMQ</span>
+              <span class="stack-tag">amqplib</span>
+              <span class="stack-tag">Event-Driven</span>
+              <span class="stack-tag">DLX</span>
+              <span class="stack-tag">Outbox Pattern</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/rabbit-mq-using-amqplib" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Digital Document Signature Service -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">03 // CRYPTOGRAPHIC PIPELINE</span>
+              <span class="project-badge-tag">Security &amp; Queues</span>
+            </div>
+            <h3 class="project-title">Digital Document Signature Service</h3>
+          </div>
+          <p class="project-description">
+            Built a document validation server applying SHA-256 cryptographic hashing techniques to verify file integrity and enforce anti-tampering rules. Integrated BullMQ queue scheduling over Redis to execute asynchronous mail worker tasks paired with Socket.io push updates.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">MongoDB</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">BullMQ</span>
+              <span class="stack-tag">Socket.io</span>
+              <span class="stack-tag">SHA-256</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/Document-Signature" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: AI Resume Builder & Profile Parser -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">04 // AI PIPELINE</span>
+              <span class="project-badge-tag">LLM Workflow</span>
+            </div>
+            <h3 class="project-title">AI Resume Builder &amp; Profile Parser</h3>
+          </div>
+          <p class="project-description">
+            Architected an automated text extraction pipeline utilizing Large Language Models to convert unstructured profile data into validated JSON objects. Configured BullMQ job queues to offload computationally heavy background operations, including file generation, image rendering, and template formatting.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">Google GenAI</span>
+              <span class="stack-tag">OpenAI</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">BullMQ</span>
+              <span class="stack-tag">Express</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/AI-Resume-Builder" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: LangChain LLM Integration POC -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">05 // GENERATIVE AI</span>
+              <span class="project-badge-tag">RAG Architecture</span>
+            </div>
+            <h3 class="project-title">LangChain LLM Integration POC</h3>
+          </div>
+          <p class="project-description">
+            Proof of concept demonstrating custom enterprise data enrichment using LangChain and LangGraph frameworks. Connects backend pipelines to LLM providers with robust prompt orchestration, streaming callbacks, and context-aware retrieval.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">LangChain</span>
+              <span class="stack-tag">LangGraph</span>
+              <span class="stack-tag">Google GenAI</span>
+              <span class="stack-tag">OpenAI</span>
+              <span class="stack-tag">Node.js</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/langchain-llm-integration-poc" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6: Distributed Web Crawler Engine -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">06 // HIGH-CONCURRENCY</span>
+              <span class="project-badge-tag">C++ Systems</span>
+            </div>
+            <h3 class="project-title">Distributed Web Crawler Engine</h3>
+          </div>
+          <p class="project-description">
+            An optimized systems implementation built to crawl web structures. Leverages custom algorithms and low-level C++ data structures (Hashtable, Hash Map, Memory Pooling) with multi-threaded traversal and rate-limiting queues.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">C++</span>
+              <span class="stack-tag">Custom Hash Map</span>
+              <span class="stack-tag">Algorithms</span>
+              <span class="stack-tag">Multithreading</span>
+              <span class="stack-tag">Web Crawler</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/Crawler" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 7: LeetCode Problem Analyzer -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">07 // ALGORITHM ENGINE</span>
+              <span class="project-badge-tag">DSA &amp; Vision</span>
+            </div>
+            <h3 class="project-title">LeetCode Problem Analyzer</h3>
+          </div>
+          <p class="project-description">
+            Smart developer tool that scans and analyzes coding problem formulations, extracting pattern constraints, test case boundaries, and asymptotic complexity using Google Cloud Vision and GenAI to assist in algorithmic optimization.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Google GenAI</span>
+              <span class="stack-tag">Cloud Vision</span>
+              <span class="stack-tag">Express</span>
+              <span class="stack-tag">Mongoose</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/Problem-Analyzer" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 8: Full-Stack Social Media Platform -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-top-bar">
+              <span class="project-num">08 // FULL-STACK WEB</span>
+              <span class="project-badge-tag">Real-Time App</span>
+            </div>
+            <h3 class="project-title">Full-Stack Social Media Platform</h3>
+          </div>
+          <p class="project-description">
+            Dynamic client application and user hub for a social platform. Features client-side state management with Redux Toolkit, real-time message sync with WebSockets, Firebase Auth, and schema validation with Zod.
+          </p>
+          <div class="project-footer">
+            <div class="tech-stack-row">
+              <span class="stack-tag">Next.js</span>
+              <span class="stack-tag">Redux</span>
+              <span class="stack-tag">Firebase Auth</span>
+              <span class="stack-tag">WebSockets</span>
+              <span class="stack-tag">Zod</span>
+              <span class="stack-tag">MUI</span>
+            </div>
+            <a href="https://github.com/Parmeetkumarg90/Social-Media-App" target="_blank" rel="noopener noreferrer" class="project-github-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Codebase</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Competencies Section -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Technical Competencies</h2>
+        <p class="section-desc">Structured technical proficiency grouped by system domains.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="card skill-card">
+          <h4 class="skill-category-title">
+            <span class="cat-icon">&lt;/&gt;</span> Languages
+          </h4>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill primary-pill">C++</span>
+            <span class="skill-pill primary-pill">TypeScript</span>
+            <span class="skill-pill">JavaScript (ES6+)</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">C</span>
+          </div>
+        </div>
+
+        <div class="card skill-card">
+          <h4 class="skill-category-title">
+            <span class="cat-icon">⚙️</span> Backend &amp; Architectures
+          </h4>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill primary-pill">NestJS</span>
+            <span class="skill-pill primary-pill">Node.js</span>
+            <span class="skill-pill">Express.js</span>
+            <span class="skill-pill primary-pill">Domain-Driven Design (DDD)</span>
+            <span class="skill-pill primary-pill">CQRS</span>
+            <span class="skill-pill">Event-Driven Architecture (EDA)</span>
+            <span class="skill-pill">Microservices</span>
+            <span class="skill-pill">Inbox-Outbox Pattern</span>
+            <span class="skill-pill">WebSockets &amp; Socket.io</span>
+            <span class="skill-pill">RESTful APIs</span>
+          </div>
+        </div>
+
+        <div class="card skill-card">
+          <h4 class="skill-category-title">
+            <span class="cat-icon">🗄️</span> Databases, ORMs &amp; Queues
+          </h4>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill primary-pill">PostgreSQL</span>
+            <span class="skill-pill primary-pill">RabbitMQ (amqplib)</span>
+            <span class="skill-pill primary-pill">BullMQ</span>
+            <span class="skill-pill">Redis (Caching / Pub-Sub)</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">TypeORM</span>
+            <span class="skill-pill">Mongoose</span>
+          </div>
+        </div>
+
+        <div class="card skill-card">
+          <h4 class="skill-category-title">
+            <span class="cat-icon">☁️</span> AI, Payments &amp; DevOps Tools
+          </h4>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill primary-pill">Stripe Connect</span>
+            <span class="skill-pill">PayMongo</span>
+            <span class="skill-pill">Google Gemini API</span>
+            <span class="skill-pill">LangChain &amp; LangGraph</span>
+            <span class="skill-pill primary-pill">Docker</span>
+            <span class="skill-pill">Git / GitHub</span>
+            <span class="skill-pill">Linux CLI</span>
+            <span class="skill-pill">Postman</span>
+            <span class="skill-pill">Next.js &amp; TailwindCSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Achievements Section -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Education &amp; Achievements</h2>
+        <p class="section-desc">Academic degrees, honors, and leadership engagements.</p>
+      </div>
+
+      <div class="education-grid">
+        <div class="card edu-card">
+          <div class="edu-badge-row">
+            <span class="degree-badge">Master's Degree</span>
+            <span class="edu-period">2025 – 2027</span>
+          </div>
+          <h3 class="edu-title">Master of Computer Applications (MCA)</h3>
+          <p class="edu-institution">Chandigarh University · Mohali, India</p>
+          <p class="edu-note">Pursuing 2nd Year · Deepening advanced distributed computing and operating systems.</p>
+        </div>
+
+        <div class="card edu-card">
+          <div class="edu-badge-row">
+            <span class="degree-badge">Bachelor's Degree</span>
+            <span class="edu-period">2022 – 2025</span>
+          </div>
+          <h3 class="edu-title">Bachelor of Computer Applications (BCA)</h3>
+          <p class="edu-institution">Kurukshetra University (Arya P.G. College) · Panipat, India</p>
+          <p class="edu-note">Graduated with <strong>CGPA: 7.5</strong> · Rigorous foundation in data structures and computer systems.</p>
+        </div>
+
+        <div class="card edu-card achievements-card">
+          <div class="edu-badge-row">
+            <span class="degree-badge accent-badge">Honors &amp; Service</span>
+            <span class="edu-period">Activities</span>
+          </div>
+          <h3 class="edu-title">Honors &amp; Volunteer Engagements</h3>
+          <ul class="bullet-list achievements-list">
+            <li><strong>🥇 Ranked 1st Place</strong> — On-Spot Programming / Coding, Zerone IT Fest.</li>
+            <li><strong>🥈 Ranked 2nd Place</strong> — Bug Hunt / Code Debugging, Zerone IT Fest.</li>
+            <li><strong>National Cadet Corps (NCC)</strong> Cadet &amp; <strong>National Service Scheme (NSS)</strong> Volunteer.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Philosophy / Gita Quote Card -->
+    <section class="section philosophy-section">
+      <div class="card quote-card">
+        <div class="quote-icon">“</div>
+        <p class="quote-text" id="gita-quote">
+          "You have the right to perform your prescribed actions, but not to claim the results."
+        </p>
+        <div class="quote-author">
+          <span class="author-name">— Bhagavad Gita, Chapter 2, Verse 47</span>
+          <span class="author-title">Core Engineering Principle · Focus on Craft &amp; Disciplined Execution</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimalist Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-desc">Have a distributed systems challenge, an engineering role, or a technical inquiry? Drop a message below.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="card contact-card">
+          <div class="contact-info-strip">
+            <div class="contact-method">
+              <span class="contact-lbl">Direct Email</span>
+              <button class="contact-val email-click-copy" onclick="copyEmailToClipboard('parmeetkumarg90@gmail.com')">
+                parmeetkumarg90@gmail.com <span class="copy-badge">Copy</span>
+              </button>
+            </div>
+            <div class="contact-method">
+              <span class="contact-lbl">Phone</span>
+              <a href="tel:+919068057560" class="contact-val">+91 90680 57560</a>
+            </div>
+            <div class="contact-method">
+              <span class="contact-lbl">Location</span>
+              <span class="contact-val">Panipat, Haryana, India</span>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mobile">Phone Number (Optional)</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="+91 98765 43210" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Let's discuss microservices, architecture pipelines, or open opportunities..." required></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="submit-button">
+              <span id="btn-text">Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">&lt;/&gt; Parmeet Kumar</span>
+        <span class="footer-copyright">© 2026 · Designed with high-precision systems architecture</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/Parmeetkumarg90" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/parmeet-kumar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://leetcode.com/u/parmeetkumarg90/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+        <a href="#hero" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="index.js"></script>
+</body>
 </html>
